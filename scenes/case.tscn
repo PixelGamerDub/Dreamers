@@ -1,11 +1,27 @@
-[gd_scene load_steps=2 format=3 uid="uid://btookag4um20w"]
+[gd_scene load_steps=3 format=3 uid="uid://btookag4um20w"]
 
 [ext_resource type="Script" uid="uid://cq6ojcko863di" path="res://scripts/case.gd" id="1_712p6"]
+[ext_resource type="Texture2D" uid="uid://fgkjbacu43jy" path="res://icon.svg" id="2_4w0dx"]
 
 [node name="Case" type="Button"]
 custom_minimum_size = Vector2(100, 100)
 offset_right = 8.0
 offset_bottom = 8.0
 script = ExtResource("1_712p6")
+
+[node name="Symbole" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 3.0
+offset_top = 1.999999
+offset_right = 31.0
+offset_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("2_4w0dx")
 
 [connection signal="pressed" from="." to="." method="_on_pressed"]
