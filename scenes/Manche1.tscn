@@ -1,0 +1,37 @@
+[gd_scene load_steps=2 format=3 uid="uid://den6t4outgp3p"]
+
+[ext_resource type="PackedScene" uid="uid://btookag4um20w" path="res://scenes/case.tscn" id="1_05x1h"]
+
+[node name="Manche1" type="Node2D"]
+
+[node name="GridContainer" type="GridContainer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+columns = 3
+
+[node name="Case" parent="GridContainer" instance=ExtResource("1_05x1h")]
+layout_mode = 2
+
+[node name="Case2" parent="GridContainer" instance=ExtResource("1_05x1h")]
+layout_mode = 2
+
+[node name="Case3" parent="GridContainer" instance=ExtResource("1_05x1h")]
+layout_mode = 2
+
+[node name="Case4" parent="GridContainer" instance=ExtResource("1_05x1h")]
+layout_mode = 2
+
+[node name="Case5" parent="GridContainer" instance=ExtResource("1_05x1h")]
+layout_mode = 2
+
+[node name="Case6" parent="GridContainer" instance=ExtResource("1_05x1h")]
+layout_mode = 2
+
+[node name="Case7" parent="GridContainer" instance=ExtResource("1_05x1h")]
+layout_mode = 2
+
+[node name="Case8" parent="GridContainer" instance=ExtResource("1_05x1h")]
+layout_mode = 2
+
+[node name="Case9" parent="GridContainer" instance=ExtResource("1_05x1h")]
+layout_mode = 2
