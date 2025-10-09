@@ -9,38 +9,38 @@ offset_right = 40.0
 offset_bottom = 40.0
 columns = 3
 
-[node name="Case" parent="GridContainer" instance=ExtResource("1_05x1h")]
+[node name="Case" parent="GridContainer" groups=["cases", "colonne1", "diagonale1", "ligne1"] instance=ExtResource("1_05x1h")]
 layout_mode = 2
 nom = "case1"
 
-[node name="Case2" parent="GridContainer" instance=ExtResource("1_05x1h")]
+[node name="Case2" parent="GridContainer" groups=["cases", "colonne2", "ligne1"] instance=ExtResource("1_05x1h")]
 layout_mode = 2
 nom = "case2"
 
-[node name="Case3" parent="GridContainer" instance=ExtResource("1_05x1h")]
+[node name="Case3" parent="GridContainer" groups=["cases", "colonne3", "diagonale2", "ligne1"] instance=ExtResource("1_05x1h")]
 layout_mode = 2
 nom = "case3"
 
-[node name="Case4" parent="GridContainer" instance=ExtResource("1_05x1h")]
+[node name="Case4" parent="GridContainer" groups=["cases", "colonne1", "ligne2"] instance=ExtResource("1_05x1h")]
 layout_mode = 2
 nom = "case4"
 
-[node name="Case5" parent="GridContainer" instance=ExtResource("1_05x1h")]
+[node name="Case5" parent="GridContainer" groups=["cases", "colonne2", "diagonale1", "diagonale2", "ligne2"] instance=ExtResource("1_05x1h")]
 layout_mode = 2
 nom = "case5"
 
-[node name="Case6" parent="GridContainer" instance=ExtResource("1_05x1h")]
+[node name="Case6" parent="GridContainer" groups=["cases", "colonne3", "ligne2"] instance=ExtResource("1_05x1h")]
 layout_mode = 2
 nom = "case6"
 
-[node name="Case7" parent="GridContainer" instance=ExtResource("1_05x1h")]
+[node name="Case7" parent="GridContainer" groups=["cases", "colonne1", "diagonale2", "ligne3"] instance=ExtResource("1_05x1h")]
 layout_mode = 2
 nom = "case7"
 
-[node name="Case8" parent="GridContainer" instance=ExtResource("1_05x1h")]
+[node name="Case8" parent="GridContainer" groups=["cases", "colonne2", "ligne3"] instance=ExtResource("1_05x1h")]
 layout_mode = 2
 nom = "case8"
 
-[node name="Case9" parent="GridContainer" instance=ExtResource("1_05x1h")]
+[node name="Case9" parent="GridContainer" groups=["cases", "colonne3", "diagonale1", "ligne3"] instance=ExtResource("1_05x1h")]
 layout_mode = 2
 nom = "case9"
