@@ -1,8 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://cfbbu17p65bjl"]
-
-[ext_resource type="Texture2D" uid="uid://dlkx0ip7vb682" path="res://Morpion.png" id="1_ig7tw"]
-
-[node name="Node2D" type="Node2D"]
-
-[node name="Morpion" type="Sprite2D" parent="."]
-texture = ExtResource("1_ig7tw")
