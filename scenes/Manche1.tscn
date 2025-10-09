@@ -11,27 +11,36 @@ columns = 3
 
 [node name="Case" parent="GridContainer" instance=ExtResource("1_05x1h")]
 layout_mode = 2
+nom = "case1"
 
 [node name="Case2" parent="GridContainer" instance=ExtResource("1_05x1h")]
 layout_mode = 2
+nom = "case2"
 
 [node name="Case3" parent="GridContainer" instance=ExtResource("1_05x1h")]
 layout_mode = 2
+nom = "case3"
 
 [node name="Case4" parent="GridContainer" instance=ExtResource("1_05x1h")]
 layout_mode = 2
+nom = "case4"
 
 [node name="Case5" parent="GridContainer" instance=ExtResource("1_05x1h")]
 layout_mode = 2
+nom = "case5"
 
 [node name="Case6" parent="GridContainer" instance=ExtResource("1_05x1h")]
 layout_mode = 2
+nom = "case6"
 
 [node name="Case7" parent="GridContainer" instance=ExtResource("1_05x1h")]
 layout_mode = 2
+nom = "case7"
 
 [node name="Case8" parent="GridContainer" instance=ExtResource("1_05x1h")]
 layout_mode = 2
+nom = "case8"
 
 [node name="Case9" parent="GridContainer" instance=ExtResource("1_05x1h")]
 layout_mode = 2
+nom = "case9"

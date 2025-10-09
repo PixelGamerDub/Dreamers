@@ -1,6 +1,11 @@
-[gd_scene format=3 uid="uid://btookag4um20w"]
+[gd_scene load_steps=2 format=3 uid="uid://btookag4um20w"]
+
+[ext_resource type="Script" uid="uid://cq6ojcko863di" path="res://scripts/case.gd" id="1_712p6"]
 
 [node name="Case" type="Button"]
 custom_minimum_size = Vector2(100, 100)
 offset_right = 8.0
 offset_bottom = 8.0
+script = ExtResource("1_712p6")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]
