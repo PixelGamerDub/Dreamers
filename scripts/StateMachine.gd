@@ -1,5 +1,5 @@
 extends Node
-class_name State
+class_name StateMachine
 @onready var state=$VideState
 func enter():
 	pass
