@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://btookag4um20w"]
+[gd_scene load_steps=5 format=3 uid="uid://btookag4um20w"]
 
 [ext_resource type="Script" uid="uid://cq6ojcko863di" path="res://scripts/case.gd" id="1_712p6"]
 [ext_resource type="Texture2D" uid="uid://dinyjhtxfrind" path="res://Sprite/croix.png" id="2_4ongv"]
 [ext_resource type="Texture2D" uid="uid://bslu5j7ys4apl" path="res://Sprite/Rond.png" id="3_vuvln"]
+[ext_resource type="Script" uid="uid://vnleslnb2gyl" path="res://scripts/state_machine.gd" id="4_vuvln"]
 
 [node name="Case" type="Button"]
 custom_minimum_size = Vector2(100, 100)
@@ -38,7 +39,8 @@ grow_vertical = 2
 scale = Vector2(0.75, 0.75)
 texture = ExtResource("3_vuvln")
 
-[node name="Node" type="Node" parent="."]
+[node name="StateMachine" type="Node" parent="."]
+script = ExtResource("4_vuvln")
 
 [node name="Node2" type="Node" parent="."]
 
