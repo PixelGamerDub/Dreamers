@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://btookag4um20w"]
+[gd_scene load_steps=4 format=3 uid="uid://btookag4um20w"]
 
 [ext_resource type="Script" uid="uid://cq6ojcko863di" path="res://scripts/case.gd" id="1_712p6"]
-[ext_resource type="Texture2D" uid="uid://fgkjbacu43jy" path="res://icon.svg" id="2_4w0dx"]
+[ext_resource type="Texture2D" uid="uid://dinyjhtxfrind" path="res://Sprite/croix.png" id="2_4ongv"]
+[ext_resource type="Texture2D" uid="uid://bslu5j7ys4apl" path="res://Sprite/Rond.png" id="3_vuvln"]
 
 [node name="Case" type="Button"]
 custom_minimum_size = Vector2(100, 100)
@@ -9,7 +10,7 @@ offset_right = 8.0
 offset_bottom = 8.0
 script = ExtResource("1_712p6")
 
-[node name="Symbole" type="TextureRect" parent="."]
+[node name="croix" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -21,6 +22,24 @@ offset_bottom = 30.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.75, 0.75)
-texture = ExtResource("2_4w0dx")
+texture = ExtResource("2_4ongv")
+
+[node name="rond" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 3.0
+offset_top = 1.999999
+offset_right = 31.0
+offset_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("3_vuvln")
+
+[node name="Node" type="Node" parent="."]
+
+[node name="Node2" type="Node" parent="."]
 
 [connection signal="pressed" from="." to="." method="_on_pressed"]
