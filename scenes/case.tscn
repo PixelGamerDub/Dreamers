@@ -11,6 +11,7 @@ offset_bottom = 8.0
 script = ExtResource("1_712p6")
 
 [node name="croix" type="TextureRect" parent="."]
+texture_filter = 1
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -25,6 +26,7 @@ scale = Vector2(0.75, 0.75)
 texture = ExtResource("2_4ongv")
 
 [node name="rond" type="TextureRect" parent="."]
+texture_filter = 1
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
