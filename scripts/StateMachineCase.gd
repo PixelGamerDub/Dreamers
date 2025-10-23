@@ -1,9 +1,9 @@
-extends StateMachine
-class_name StateMachineCase
+extends Node
+class_name StateMachine
 
-func _init():
-	etatInitial = $VideState
-	etatActuel = etatInitial
+var etatInitial : State
+var etatActuel : State
+
 func _ready() :
 	etatInitial.entrer()
 	
