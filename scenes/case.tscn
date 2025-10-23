@@ -71,4 +71,6 @@ script = ExtResource("5_frfpb")
 
 [node name="FissureState" type="Node" parent="StateMachine"]
 
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
 [connection signal="pressed" from="." to="." method="_on_pressed"]
