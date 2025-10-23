@@ -63,7 +63,7 @@ texture = ExtResource("4_vuvln")
 [node name="StateMachine" type="Node" parent="."]
 script = ExtResource("5_frfpb")
 
-[node name="VideSate" type="Node" parent="StateMachine"]
+[node name="VideState" type="Node" parent="StateMachine"]
 
 [node name="RondState" type="Node" parent="StateMachine"]
 

@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://den6t4outgp3p"]
+[gd_scene load_steps=3 format=3 uid="uid://den6t4outgp3p"]
 
 [ext_resource type="PackedScene" uid="uid://btookag4um20w" path="res://scenes/case.tscn" id="1_05x1h"]
+[ext_resource type="Script" uid="uid://cxt5bt2gbx3mw" path="res://scripts/detruit_State.gd" id="2_pknkk"]
 
 [node name="Manche1" type="Node2D"]
 
@@ -9,8 +10,9 @@ offset_right = 40.0
 offset_bottom = 40.0
 columns = 3
 
-[node name="Case" parent="GridContainer" groups=["cases", "colonne1", "diagonale1", "ligne1"] instance=ExtResource("1_05x1h")]
+[node name="Case" parent="GridContainer" node_paths=PackedStringArray("etat") groups=["cases", "colonne1", "diagonale1", "ligne1"] instance=ExtResource("1_05x1h")]
 layout_mode = 2
+etat = NodePath("../detruitSate")
 
 [node name="Case2" parent="GridContainer" groups=["cases", "colonne2", "ligne1"] instance=ExtResource("1_05x1h")]
 layout_mode = 2
@@ -35,3 +37,6 @@ layout_mode = 2
 
 [node name="Case9" parent="GridContainer" groups=["cases", "colonne3", "diagonale1", "ligne3"] instance=ExtResource("1_05x1h")]
 layout_mode = 2
+
+[node name="detruitSate" type="Node" parent="GridContainer"]
+script = ExtResource("2_pknkk")
