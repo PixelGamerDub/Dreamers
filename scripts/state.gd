@@ -1,3 +1,11 @@
 extends Node
 class_name State
-var jouable:bool
+
+func entrer():
+	pass
+	
+func sortir():
+	pass
+
+func transitionSelon(move: String):
+	pass
