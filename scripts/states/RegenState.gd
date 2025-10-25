@@ -14,7 +14,7 @@ func sortir():
 	pass
 func transitionSelon(move: String):
 	match(move):
-		"REGEN":
+		Constantes.MOVE_REGEN:
 			return StateCase.ETAT_VIDE
 		_:
 			print("Etat invalide")

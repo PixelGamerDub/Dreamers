@@ -14,11 +14,11 @@ func sortir():
 	pass
 func transitionSelon(move: String):
 	match(move):
-		"X":
+		Constantes.MOVE_X:
 			return StateCase.ETAT_X
-		"O":
+		Constantes.MOVE_O:
 			return StateCase.ETAT_O
-		"FISSURE":
+		Constantes.MOVE_FISSURE:
 			return StateCase.ETAT_FISSURE
 		_:
 			print("Etat invalide")

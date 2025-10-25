@@ -10,15 +10,26 @@ class_name StateMachineCase
 	StateCase.ETAT_X:		$XState
 }
 
-func _init():
-	etatInitial = $VideState
-	etatActuel = etatInitial
-	
 func _ready() :
+	etatInitial = etats[StateCase.ETAT_VIDE]
+	etatActuel = etatInitial
 	etatInitial.entrer()
 	
 func changerEtat(move : String):
-	if etatActuel.jouable :
-	#Reprendre ici
+	if not etatActuel.jouable:
+		return
+	
+	var prochainEtat = etats[etatActuel.transitionSelon(move)]
+	
+	# Si le move effectué ne mène à aucun état, ne rien faire
+	if prochainEtat == null:
+		print("Transition impossible")
+		return
+	
+	# Transition à l'état suivant
+	etatActuel.sortir()
+	etatActuel = prochainEtat
+	etatActuel.entrer()
+
 func forcerEtat(_etat : State):
 	pass
