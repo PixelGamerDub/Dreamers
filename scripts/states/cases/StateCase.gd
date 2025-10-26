@@ -1,4 +1,4 @@
-extends  State
+extends State
 class_name StateCase
 
 static var ETAT_VIDE:= "E_VIDE"

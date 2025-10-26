@@ -1,20 +1,34 @@
-[gd_scene load_steps=2 format=3 uid="uid://gqjh4h44pfjp"]
+[gd_scene load_steps=9 format=3 uid="uid://gqjh4h44pfjp"]
 
 [ext_resource type="Script" uid="uid://c0tjljr1jawjm" path="res://scripts/globals/GameManager.gd" id="1_hwd4i"]
+[ext_resource type="Script" uid="uid://cnbqqxvla0a51" path="res://scripts/stateMachines/StateMachineManche.gd" id="2_glms7"]
+[ext_resource type="Script" uid="uid://dgyhuxhcrx47x" path="res://scripts/states/manches/Manche1State.gd" id="3_jdad8"]
+[ext_resource type="Script" uid="uid://dorwrsi27aifv" path="res://scripts/states/manches/Manche2State.gd" id="4_k4jhu"]
+[ext_resource type="Script" uid="uid://i7bfuy5fmlrx" path="res://scripts/states/manches/Manche3State.gd" id="5_frtjd"]
+[ext_resource type="Script" uid="uid://o1pqpkl0bcnl" path="res://scripts/stateMachines/StateMachineTour.gd" id="6_0rse5"]
+[ext_resource type="Script" uid="uid://b6e7y78s6lbgr" path="res://scripts/states/tours/TourXState.gd" id="7_aonbx"]
+[ext_resource type="Script" uid="uid://bg656dkukpjhb" path="res://scripts/states/tours/TourOState.gd" id="8_lcbjr"]
 
 [node name="GameManager" type="Node"]
 script = ExtResource("1_hwd4i")
 
 [node name="StateMachineManche" type="Node" parent="."]
+script = ExtResource("2_glms7")
 
 [node name="Manche1State" type="Node" parent="StateMachineManche"]
+script = ExtResource("3_jdad8")
 
 [node name="Manche2State" type="Node" parent="StateMachineManche"]
+script = ExtResource("4_k4jhu")
 
 [node name="Manche3State" type="Node" parent="StateMachineManche"]
+script = ExtResource("5_frtjd")
 
 [node name="StateMachineTour" type="Node" parent="."]
+script = ExtResource("6_0rse5")
 
 [node name="TourXState" type="Node" parent="StateMachineTour"]
+script = ExtResource("7_aonbx")
 
 [node name="TourOState" type="Node" parent="StateMachineTour"]
+script = ExtResource("8_lcbjr")
