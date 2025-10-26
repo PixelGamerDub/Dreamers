@@ -19,3 +19,4 @@ func transitionSelon(move: String) -> String:
 			return StateCase.ETAT_VIDE
 		_:
 			print("Etat invalide")
+			return ""

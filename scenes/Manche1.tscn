@@ -3,50 +3,67 @@
 [ext_resource type="PackedScene" uid="uid://btookag4um20w" path="res://scenes/case.tscn" id="1_05x1h"]
 [ext_resource type="PackedScene" uid="uid://gqjh4h44pfjp" path="res://scenes/game_manager.tscn" id="2_pknkk"]
 
-[node name="Manche1" type="Node2D"]
+[node name="Manche1" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="GridContainer" type="GridContainer" parent="."]
+[node name="HBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 426.0
-offset_top = 157.0
-offset_right = 734.0
-offset_bottom = 465.0
+offset_left = -154.0
+offset_top = -160.0
+offset_right = 154.0
+offset_bottom = 160.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/separation = 64
+alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="HBoxContainer"]
+layout_mode = 2
 size_flags_horizontal = 0
 columns = 3
 
-[node name="Case" parent="GridContainer" groups=["cases", "colonne1", "diagonale1", "ligne1"] instance=ExtResource("1_05x1h")]
+[node name="Case" parent="HBoxContainer/GridContainer" groups=["cases", "colonne1", "diagonale1", "ligne1"] instance=ExtResource("1_05x1h")]
 layout_mode = 2
 
-[node name="Case2" parent="GridContainer" groups=["cases", "colonne2", "ligne1"] instance=ExtResource("1_05x1h")]
+[node name="Case2" parent="HBoxContainer/GridContainer" groups=["cases", "colonne2", "ligne1"] instance=ExtResource("1_05x1h")]
 layout_mode = 2
 
-[node name="Case3" parent="GridContainer" groups=["cases", "colonne3", "diagonale2", "ligne1"] instance=ExtResource("1_05x1h")]
+[node name="Case3" parent="HBoxContainer/GridContainer" groups=["cases", "colonne3", "diagonale2", "ligne1"] instance=ExtResource("1_05x1h")]
 layout_mode = 2
 
-[node name="Case4" parent="GridContainer" groups=["cases", "colonne1", "ligne2"] instance=ExtResource("1_05x1h")]
+[node name="Case4" parent="HBoxContainer/GridContainer" groups=["cases", "colonne1", "ligne2"] instance=ExtResource("1_05x1h")]
 layout_mode = 2
 
-[node name="Case5" parent="GridContainer" groups=["cases", "colonne2", "diagonale1", "diagonale2", "ligne2"] instance=ExtResource("1_05x1h")]
+[node name="Case5" parent="HBoxContainer/GridContainer" groups=["cases", "colonne2", "diagonale1", "diagonale2", "ligne2"] instance=ExtResource("1_05x1h")]
 layout_mode = 2
 
-[node name="Case6" parent="GridContainer" groups=["cases", "colonne3", "ligne2"] instance=ExtResource("1_05x1h")]
+[node name="Case6" parent="HBoxContainer/GridContainer" groups=["cases", "colonne3", "ligne2"] instance=ExtResource("1_05x1h")]
 layout_mode = 2
 
-[node name="Case7" parent="GridContainer" groups=["cases", "colonne1", "diagonale2", "ligne3"] instance=ExtResource("1_05x1h")]
+[node name="Case7" parent="HBoxContainer/GridContainer" groups=["cases", "colonne1", "diagonale2", "ligne3"] instance=ExtResource("1_05x1h")]
 layout_mode = 2
 
-[node name="Case8" parent="GridContainer" groups=["cases", "colonne2", "ligne3"] instance=ExtResource("1_05x1h")]
+[node name="Case8" parent="HBoxContainer/GridContainer" groups=["cases", "colonne2", "ligne3"] instance=ExtResource("1_05x1h")]
 layout_mode = 2
 
-[node name="Case9" parent="GridContainer" groups=["cases", "colonne3", "diagonale1", "ligne3"] instance=ExtResource("1_05x1h")]
+[node name="Case9" parent="HBoxContainer/GridContainer" groups=["cases", "colonne3", "diagonale1", "ligne3"] instance=ExtResource("1_05x1h")]
 layout_mode = 2
 
-[node name="detruitSate" type="Node" parent="GridContainer"]
+[node name="Levier" type="Button" parent="HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Levier"
 
 [node name="GameManager" parent="." instance=ExtResource("2_pknkk")]

@@ -6,13 +6,14 @@ func _init():
 	cleAnimation = StateCase.ETAT_VIDE
 
 func entrer():
-	#Plus tard : Jouer l'animation d'arrivée de vide
+	# Plus tard : Jouer l'animation d'arrivée de vide
 	pass
 
 func sortir():
-	#Plus tard : Jouer l'animation de sortie de vide
+	# Plus tard : Jouer l'animation de sortie de vide
 	pass
-func transitionSelon(move: String):
+
+func transitionSelon(move: String) -> String:
 	match(move):
 		Constantes.MOVE_X:
 			return StateCase.ETAT_X
@@ -22,3 +23,4 @@ func transitionSelon(move: String):
 			return StateCase.ETAT_FISSURE
 		_:
 			print("Etat invalide")
+			return ""

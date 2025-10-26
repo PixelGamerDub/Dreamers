@@ -132,5 +132,3 @@ script = ExtResource("11_snw3w")
 libraries = {
 &"": SubResource("AnimationLibrary_a426s")
 }
-
-[connection signal="pressed" from="." to="." method="_on_pressed"]
