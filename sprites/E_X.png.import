@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bslu5j7ys4apl"
-path="res://.godot/imported/Rond.png-a4d7bc43b43a23622ccd181ba2dff866.ctex"
+uid="uid://boc5y7tlp3eio"
+path="res://.godot/imported/E_X.png-2e846cf40a27b25315e592e84f314f20.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprite/Rond.png"
-dest_files=["res://.godot/imported/Rond.png-a4d7bc43b43a23622ccd181ba2dff866.ctex"]
+source_file="res://sprites/E_X.png"
+dest_files=["res://.godot/imported/E_X.png-2e846cf40a27b25315e592e84f314f20.ctex"]
 
 [params]
 
