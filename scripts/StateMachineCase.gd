@@ -31,5 +31,11 @@ func changerEtat(move : String):
 	etatActuel = prochainEtat
 	etatActuel.entrer()
 
-func forcerEtat(_etat : State):
-	pass
+func forcerEtat(etat : State):
+	# Si on est déjà dans cet état, ne rien faire
+	if etatActuel == etat:
+		return
+	
+	etatActuel.sortir()
+	etatActuel = etat
+	etatActuel.entrer()
