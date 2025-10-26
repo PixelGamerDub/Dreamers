@@ -1,16 +1,18 @@
 extends StateCase
 class_name FissureState
 
+signal jouerAnimation(cle : String)
+
 func _init():
 	jouable = true
 	cleAnimation = StateCase.ETAT_FISSURE
 
 func entrer():
-	#Plus tard : Jouer l'animation d'arrivée de vide
-	print("Case fissurée")
+	jouerAnimation.emit(cleAnimation)
+	pass
 
 func sortir():
-	#Plus tard : Jouer l'animation de sortie de vide
+	# Plus tard : Jouer l'animation de sortie de vide
 	pass
 
 func transitionSelon(move: String) -> String:

@@ -2,8 +2,8 @@ extends StateTour
 class_name TourXState
 
 func _ready():
-	symbole = "X"
-	adversaire = StateTour.ETAT_TOUR_O
+	monMove = Constantes.MOVE_X
+	moveAdverse = Constantes.MOVE_O
 
 func entrer():
 	print("Au tour de X")
@@ -14,4 +14,4 @@ func sortir():
 	pass
 
 func transitionSelon(_move: String) -> String:
-	return adversaire
+	return StateTour.ETAT_TOUR_O

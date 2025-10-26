@@ -8,12 +8,10 @@ static var ETAT_REGEN:= "E_REGEN"
 static var ETAT_X:= "E_X"
 static var ETAT_O:= "E_O"
 
-
 var jouable : bool
 var cleAnimation : String
 
 func entrer():
-	# Plus tard : lancer l'animation
 	pass
 
 func sortir():

@@ -1,12 +1,14 @@
 extends StateCase
 class_name VideState
 
+signal jouerAnimation(cle : String)
+
 func _init():
 	jouable = true
 	cleAnimation = StateCase.ETAT_VIDE
 
 func entrer():
-	# Plus tard : Jouer l'animation d'arrivée de vide
+	jouerAnimation.emit(cleAnimation)
 	pass
 
 func sortir():

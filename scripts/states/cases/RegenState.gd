@@ -1,13 +1,15 @@
 extends StateCase
 class_name RegenState
 
+signal jouerAnimation(cle : String)
+
 func _init():
 	jouable = false
 	cleAnimation = StateCase.ETAT_REGEN
 
 func entrer():
-	#Plus tard : Jouer l'animation d'arrivée de vide
-	print("Case en régénération")
+	jouerAnimation.emit(cleAnimation)
+	pass
 
 func sortir():
 	#Plus tard : Jouer l'animation de sortie de vide

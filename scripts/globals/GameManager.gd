@@ -31,13 +31,29 @@ func jouer():
 	var rand := randf()
 	
 	if rand < mancheActuelle().borne1:
-		move = Constantes.MOVE_X
+		move = tourActuel().monMove
 	elif rand < mancheActuelle().borne2:
-		move = Constantes.MOVE_O
+		move = tourActuel().moveAdverse
 	elif rand < 1:
 		move = Constantes.MOVE_FISSURE
 	
 	caseSelectionnee.changerEtat(move)
-	caseSelectionnee.animatedSprite.play(caseSelectionnee.etatActuel().cleAnimation)
+	actualiserCases()
 	stateMachineTour.changerEtat(move)
-	print(mancheActuelle().verifierConditionsVictoire())
+	
+	match(mancheActuelle().verifierConditionsVictoire()):
+		StateTour.ETAT_TOUR_X:
+			print("Le joueur X a gagné la manche " + str(mancheActuelle().numero) + " !")
+		StateTour.ETAT_TOUR_O:
+			print("Le joueur O a gagné la manche " + str(mancheActuelle().numero) + " !")
+
+func actualiserCases():
+	for case in get_tree().get_nodes_in_group("cases"):
+		case.vieillir()
+		
+		if case.age >= mancheActuelle().nbCoupsMax * 2 :
+			case.forcerEtat(StateCase.ETAT_VIDE)
+		
+		# A changer : rajouter un attribut bool "en régénération" dans les états case
+		if case.etatActuel() is DetruitState or case.etatActuel() is RegenState:
+			case.reparer()
