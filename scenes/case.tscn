@@ -4,16 +4,16 @@
 [ext_resource type="Texture2D" uid="uid://ccub7py7bhm26" path="res://sprites/E_DETRUIT.png" id="2_3s3ua"]
 [ext_resource type="Texture2D" uid="uid://mu54d17va3sr" path="res://sprites/E_FISSURE.png" id="3_k356g"]
 [ext_resource type="Texture2D" uid="uid://dxwfh566rls44" path="res://sprites/E_O.png" id="4_snw3w"]
-[ext_resource type="Script" uid="uid://cevuv534yjncd" path="res://scripts/StateMachineCase.gd" id="5_frfpb"]
+[ext_resource type="Script" uid="uid://cevuv534yjncd" path="res://scripts/stateMachines/StateMachineCase.gd" id="5_frfpb"]
 [ext_resource type="Texture2D" uid="uid://kpfn2o2ufdkw" path="res://sprites/E_REGEN.png" id="5_xvsyd"]
-[ext_resource type="Script" uid="uid://bhsvnegeya37o" path="res://scripts/StatesCase/VideState.gd" id="6_fhgjg"]
+[ext_resource type="Script" uid="uid://bhsvnegeya37o" path="res://scripts/states/cases/VideState.gd" id="6_fhgjg"]
 [ext_resource type="Texture2D" uid="uid://46uo7yyea0p6" path="res://sprites/E_VIDE.png" id="6_v6mt1"]
 [ext_resource type="Texture2D" uid="uid://boc5y7tlp3eio" path="res://sprites/E_X.png" id="7_lf3rj"]
-[ext_resource type="Script" uid="uid://yrtflx6bcd5e" path="res://scripts/StatesCase/OState.gd" id="7_nkvb8"]
-[ext_resource type="Script" uid="uid://bc4y1q3chx1cl" path="res://scripts/StatesCase/XState.gd" id="8_i7r4h"]
-[ext_resource type="Script" uid="uid://coocq7y4grk3v" path="res://scripts/StatesCase/FissureState.gd" id="9_3s3ua"]
-[ext_resource type="Script" uid="uid://bofyafa04u8b" path="res://scripts/StatesCase/DetruitState.gd" id="10_k356g"]
-[ext_resource type="Script" uid="uid://lu3ill2u3mk8" path="res://scripts/StatesCase/RegenState.gd" id="11_snw3w"]
+[ext_resource type="Script" uid="uid://yrtflx6bcd5e" path="res://scripts/states/cases/OState.gd" id="7_nkvb8"]
+[ext_resource type="Script" uid="uid://bc4y1q3chx1cl" path="res://scripts/states/cases/XState.gd" id="8_i7r4h"]
+[ext_resource type="Script" uid="uid://coocq7y4grk3v" path="res://scripts/states/cases/FissureState.gd" id="9_3s3ua"]
+[ext_resource type="Script" uid="uid://bofyafa04u8b" path="res://scripts/states/cases/DetruitState.gd" id="10_k356g"]
+[ext_resource type="Script" uid="uid://lu3ill2u3mk8" path="res://scripts/states/cases/RegenState.gd" id="11_snw3w"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_6twel"]
 animations = [{
@@ -66,23 +66,23 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="Animation" id="Animation_aft4w"]
-resource_name = "E_VIDE"
+[sub_resource type="Animation" id="Animation_g34np"]
+resource_name = "E_DETRUIT"
 
 [sub_resource type="Animation" id="Animation_uj17p"]
 resource_name = "E_FISSURE"
 
-[sub_resource type="Animation" id="Animation_g34np"]
-resource_name = "E_DETRUIT"
+[sub_resource type="Animation" id="Animation_6id1a"]
+resource_name = "E_O"
 
 [sub_resource type="Animation" id="Animation_md0vh"]
 resource_name = "E_REGEN"
 
+[sub_resource type="Animation" id="Animation_aft4w"]
+resource_name = "E_VIDE"
+
 [sub_resource type="Animation" id="Animation_x46jd"]
 resource_name = "E_X"
-
-[sub_resource type="Animation" id="Animation_6id1a"]
-resource_name = "E_O"
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_a426s"]
 _data = {

@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://gqjh4h44pfjp"]
+
+[ext_resource type="Script" uid="uid://c0tjljr1jawjm" path="res://scripts/globals/GameManager.gd" id="1_hwd4i"]
+
+[node name="GameManager" type="Node"]
+script = ExtResource("1_hwd4i")
+
+[node name="StateMachineManche" type="Node" parent="."]
+
+[node name="Manche1State" type="Node" parent="StateMachineManche"]
+
+[node name="Manche2State" type="Node" parent="StateMachineManche"]
+
+[node name="Manche3State" type="Node" parent="StateMachineManche"]
+
+[node name="StateMachineTour" type="Node" parent="."]
+
+[node name="TourXState" type="Node" parent="StateMachineTour"]
+
+[node name="TourOState" type="Node" parent="StateMachineTour"]

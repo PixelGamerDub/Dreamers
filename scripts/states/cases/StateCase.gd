@@ -19,5 +19,5 @@ func entrer():
 func sortir():
 	pass
 
-func transitionSelon(_move: String) -> StateCase:
-	return null
+func transitionSelon(_move: String) -> String:
+	return ""

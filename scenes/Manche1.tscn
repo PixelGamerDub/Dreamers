@@ -1,13 +1,23 @@
 [gd_scene load_steps=3 format=3 uid="uid://den6t4outgp3p"]
 
 [ext_resource type="PackedScene" uid="uid://btookag4um20w" path="res://scenes/case.tscn" id="1_05x1h"]
-[ext_resource type="Script" uid="uid://c0tjljr1jawjm" path="res://scripts/GameManager.gd" id="2_pknkk"]
+[ext_resource type="PackedScene" uid="uid://gqjh4h44pfjp" path="res://scenes/game_manager.tscn" id="2_pknkk"]
 
 [node name="Manche1" type="Node2D"]
 
 [node name="GridContainer" type="GridContainer" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 426.0
+offset_top = 157.0
+offset_right = 734.0
+offset_bottom = 465.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
 columns = 3
 
 [node name="Case" parent="GridContainer" groups=["cases", "colonne1", "diagonale1", "ligne1"] instance=ExtResource("1_05x1h")]
@@ -39,9 +49,4 @@ layout_mode = 2
 
 [node name="detruitSate" type="Node" parent="GridContainer"]
 
-[node name="GameManager" type="Node" parent="."]
-script = ExtResource("2_pknkk")
-
-[node name="StateMachineManche" type="Node" parent="GameManager"]
-
-[node name="StateMachineTour" type="Node" parent="GameManager"]
+[node name="GameManager" parent="." instance=ExtResource("2_pknkk")]

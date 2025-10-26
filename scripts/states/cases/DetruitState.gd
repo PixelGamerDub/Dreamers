@@ -12,6 +12,7 @@ func entrer():
 func sortir():
 	#Plus tard : Jouer l'animation de sortie de vide
 	pass
+
 func transitionSelon(move: String):
 	match(move):
 		Constantes.MOVE_REGEN:

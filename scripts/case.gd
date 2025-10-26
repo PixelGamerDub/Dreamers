@@ -4,6 +4,7 @@ class_name Case
 # Accès aux noeuds enfants de Case
 @onready var stateMachine = $StateMachine
 @onready var animatedSprite = $AnimatedSprite2D
+@onready var age = 0
 
 # Quand on clique sur la case
 func _on_pressed() -> void: 

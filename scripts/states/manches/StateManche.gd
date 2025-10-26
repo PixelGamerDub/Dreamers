@@ -19,5 +19,9 @@ func entrer():
 func sortir():
 	pass
 
-func transitionSelon(_move: String) -> StateCase:
+func transitionSelon(_move: String) -> String:
+	return ""
+
+# Cette fonction renvoie le joueur qui a gagné la manche ou NULL si personne n'a gagné
+func verifierConditionsVictoire() -> StateTour:
 	return null

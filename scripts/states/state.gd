@@ -7,5 +7,5 @@ func entrer():
 func sortir():
 	pass
 
-func transitionSelon(_move: String) -> State:
-	return null
+func transitionSelon(_move: String) -> String:
+	return ""
