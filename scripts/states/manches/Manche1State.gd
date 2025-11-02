@@ -6,7 +6,7 @@ func _ready():
 	dimension = 3
 	nbCoupsMax = dimension + 1
 	borne1 = 0.50 # Remplacer cette valeur par 1 pour retirer l'aléatoire
-	borne2 = 0.89
+	borne2 = 0.75 # Base : 0.89
 	cleAnimation = StateManche.ETAT_MANCHE_1
 
 func entrer():

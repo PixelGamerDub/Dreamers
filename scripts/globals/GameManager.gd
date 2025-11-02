@@ -5,6 +5,7 @@ class_name GameManager
 @onready var stateMachineTour := $StateMachineTour
 @onready var caseSelectionnee : Case = null
 @onready var levier := %Levier
+@onready var tourValide := false
 
 func _ready():
 	levier.pressed.connect(jouer)
@@ -37,7 +38,11 @@ func jouer():
 	elif rand < 1:
 		move = Constantes.MOVE_FISSURE
 	
-	caseSelectionnee.changerEtat(move)
+	tourValide = caseSelectionnee.changerEtat(move)
+	
+	if not tourValide:
+		return
+	
 	actualiserCases()
 	stateMachineTour.changerEtat(move)
 	
@@ -48,12 +53,8 @@ func jouer():
 			print("Le joueur O a gagné la manche " + str(mancheActuelle().numero) + " !")
 
 func actualiserCases():
-	for case in get_tree().get_nodes_in_group("cases"):
-		case.vieillir()
-		
-		if case.age >= mancheActuelle().nbCoupsMax * 2 :
-			case.forcerEtat(StateCase.ETAT_VIDE)
-		
-		# A changer : rajouter un attribut bool "en régénération" dans les états case
-		if case.etatActuel() is DetruitState or case.etatActuel() is RegenState:
+	var cases = get_tree().get_nodes_in_group("cases")
+	for case in cases:
+		if case != caseSelectionnee:
+			case.vieillir(mancheActuelle().nbCoupsMax * 2)
 			case.reparer()
