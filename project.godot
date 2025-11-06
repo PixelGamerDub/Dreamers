@@ -17,5 +17,10 @@ config/icon="res://icon.svg"
 
 [global_group]
 
+<<<<<<< Updated upstream
 casesX="caseX"
 casesO="caseO"
+=======
+casesX="casesX"
+casesO="casesO"
+>>>>>>> Stashed changes
