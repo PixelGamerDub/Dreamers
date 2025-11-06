@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 [gd_scene load_steps=23 format=3 uid="uid://btookag4um20w"]
 
 [ext_resource type="Script" uid="uid://cq6ojcko863di" path="res://scripts/case.gd" id="1_712p6"]
@@ -93,13 +94,18 @@ _data = {
 &"E_VIDE": SubResource("Animation_aft4w"),
 &"E_X": SubResource("Animation_x46jd")
 }
+=======
+[gd_scene load_steps=4 format=3 uid="uid://btookag4um20w"]
 
-[node name="Case" type="Button"]
-custom_minimum_size = Vector2(100, 100)
-offset_right = 8.0
-offset_bottom = 8.0
-script = ExtResource("1_712p6")
+[ext_resource type="Script" path="res://scripts/gameManager.gd" id="1_4ongv"]
+[ext_resource type="Script" path="res://scripts/stateMachineManche.gd" id="2_vuvln"]
+[ext_resource type="Script" path="res://scripts/stateMachineTour.gd" id="3_frfpb"]
+>>>>>>> Stashed changes
 
+[node name="gameManager" type="Node"]
+script = ExtResource("1_4ongv")
+
+<<<<<<< Updated upstream
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(50, 54)
 scale = Vector2(0.2823129, 0.28231293)
@@ -132,3 +138,10 @@ script = ExtResource("11_snw3w")
 libraries = {
 &"": SubResource("AnimationLibrary_a426s")
 }
+=======
+[node name="stateMachineManche" type="Node" parent="."]
+script = ExtResource("2_vuvln")
+
+[node name="stateMachineTour" type="Node" parent="."]
+script = ExtResource("3_frfpb")
+>>>>>>> Stashed changes

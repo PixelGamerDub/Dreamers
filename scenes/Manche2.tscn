@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dn3fetw6f4qtc"]
 
-[ext_resource type="PackedScene" uid="uid://btookag4um20w" path="res://scenes/case.tscn" id="1_jyqdk"]
+[ext_resource type="PackedScene" path="res://scenes/case.tscn" id="1_jyqdk"]
 [ext_resource type="PackedScene" uid="uid://gqjh4h44pfjp" path="res://scenes/game_manager.tscn" id="2_0y40c"]
 
 [node name="Manche2" type="Control"]
