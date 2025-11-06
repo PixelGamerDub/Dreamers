@@ -47,3 +47,6 @@ func vieillir(limite : int):
 
 func reparer():
 	changerEtat(Constantes.MOVE_REGEN)
+	
+func ajouterAuGroupe(groupe):
+	add_to_group("casesX")
