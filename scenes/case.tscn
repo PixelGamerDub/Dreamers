@@ -107,25 +107,25 @@ sprite_frames = SubResource("SpriteFrames_6twel")
 animation = &"E_VIDE"
 autoplay = "E_VIDE"
 
-[node name="StateMachine" type="Node" parent="."]
+[node name="StateMachineCase" type="Node" parent="."]
 script = ExtResource("5_frfpb")
 
-[node name="VideState" type="Node" parent="StateMachine"]
+[node name="VideState" type="Node" parent="StateMachineCase"]
 script = ExtResource("6_fhgjg")
 
-[node name="OState" type="Node" parent="StateMachine"]
+[node name="OState" type="Node" parent="StateMachineCase"]
 script = ExtResource("7_nkvb8")
 
-[node name="XState" type="Node" parent="StateMachine"]
+[node name="XState" type="Node" parent="StateMachineCase"]
 script = ExtResource("8_i7r4h")
 
-[node name="FissureState" type="Node" parent="StateMachine"]
+[node name="FissureState" type="Node" parent="StateMachineCase"]
 script = ExtResource("9_3s3ua")
 
-[node name="DetruitState" type="Node" parent="StateMachine"]
+[node name="DetruitState" type="Node" parent="StateMachineCase"]
 script = ExtResource("10_k356g")
 
-[node name="RegenState" type="Node" parent="StateMachine"]
+[node name="RegenState" type="Node" parent="StateMachineCase"]
 script = ExtResource("11_snw3w")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
