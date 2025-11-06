@@ -1,0 +1,1 @@
+Projet actuel : Jeu du morpion en plusieurs phases (phase 1, phase 2, phase 3). Chaque nouvelle phase augmente la taille du tableau de 1 (3/4/5) et des power ups sont proposés aux joueurs entre chaque phase.

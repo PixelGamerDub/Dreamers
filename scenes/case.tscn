@@ -101,7 +101,7 @@ offset_bottom = 8.0
 script = ExtResource("1_712p6")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(50, 54)
+position = Vector2(50, 50)
 scale = Vector2(0.2823129, 0.28231293)
 sprite_frames = SubResource("SpriteFrames_6twel")
 animation = &"E_VIDE"

@@ -2,7 +2,7 @@ extends StateCase
 class_name XState
 
 signal jouerAnimation(cle : String)
-#jkjbvhjsebghjbvsgj
+
 func _init():
 	jouable = false
 	cleAnimation = StateCase.ETAT_X
