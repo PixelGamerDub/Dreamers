@@ -36,8 +36,13 @@ func jouerAnimation(cle : String):
 
 func vieillir(limite : int):
 	age += 1
+	# a
+	if age == limite - 1:
+		animatedSprite.modulate.a = 0.33
+	else:
+		animatedSprite.modulate.a = 1
 	
-	if age >= limite and etatActuel() is not DetruitState and etatActuel() is not RegenState:
+	if age >= limite and etatActuel() is not DetruitState and etatActuel() is not RegenState and etatActuel() is not FissureState:
 		forcerEtat(StateCase.ETAT_VIDE)
 
 func reparer():

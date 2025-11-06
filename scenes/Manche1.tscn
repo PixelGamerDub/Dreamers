@@ -32,7 +32,7 @@ layout_mode = 2
 size_flags_horizontal = 0
 columns = 3
 
-[node name="Case" parent="HBoxContainer/GridContainer" groups=["cases", "colonne1", "diagonale1", "ligne1"] instance=ExtResource("1_05x1h")]
+[node name="Case1" parent="HBoxContainer/GridContainer" groups=["cases", "colonne1", "diagonale1", "ligne1"] instance=ExtResource("1_05x1h")]
 layout_mode = 2
 
 [node name="Case2" parent="HBoxContainer/GridContainer" groups=["cases", "colonne2", "ligne1"] instance=ExtResource("1_05x1h")]
