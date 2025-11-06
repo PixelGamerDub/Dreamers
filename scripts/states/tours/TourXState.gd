@@ -7,7 +7,6 @@ func _ready():
 
 func entrer():
 	print("Au tour de X")
-	signal ajouterAuGroupe(monMove)
 	# Plus tard : changer une icône à l'écran pour indiquer le tour
 	pass
 
