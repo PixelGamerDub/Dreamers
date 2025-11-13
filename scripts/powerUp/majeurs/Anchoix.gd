@@ -1,2 +1,2 @@
 extends PowerUp
-class_name PowerUpMajeur
+class_name Anchois
