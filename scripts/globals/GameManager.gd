@@ -6,6 +6,14 @@ class_name GameManager
 @onready var caseSelectionnee : Case = null
 @onready var levier := %Levier
 @onready var tourValide := false
+@onready var dicoPowerUp= {
+	"explosion" : [0,0],
+	"volCase" : [0,0],
+	"garantie" : [0,0],
+	"malediction" : [0,0],
+	"miseCroupier" : [0,0],
+	"seisme" : [0,0],
+	"anchoix" : [0,0]}
 
 func _ready():
 	levier.pressed.connect(jouer)
