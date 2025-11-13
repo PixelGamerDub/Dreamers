@@ -11,7 +11,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="HBoxContainer" type="VBoxContainer" parent="."]
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -27,39 +27,39 @@ grow_vertical = 2
 theme_override_constants/separation = 64
 alignment = 1
 
-[node name="GridContainer" type="GridContainer" parent="HBoxContainer"]
+[node name="GridContainer" type="GridContainer" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 0
 columns = 3
 
-[node name="Case1" parent="HBoxContainer/GridContainer" groups=["cases", "colonne1", "diagonale1", "ligne1"] instance=ExtResource("1_05x1h")]
+[node name="Case1" parent="VBoxContainer/GridContainer" groups=["cases", "colonne1", "diagonale1", "ligne1"] instance=ExtResource("1_05x1h")]
 layout_mode = 2
 
-[node name="Case2" parent="HBoxContainer/GridContainer" groups=["cases", "colonne2", "ligne1"] instance=ExtResource("1_05x1h")]
+[node name="Case2" parent="VBoxContainer/GridContainer" groups=["cases", "colonne2", "ligne1"] instance=ExtResource("1_05x1h")]
 layout_mode = 2
 
-[node name="Case3" parent="HBoxContainer/GridContainer" groups=["cases", "colonne3", "diagonale2", "ligne1"] instance=ExtResource("1_05x1h")]
+[node name="Case3" parent="VBoxContainer/GridContainer" groups=["cases", "colonne3", "diagonale2", "ligne1"] instance=ExtResource("1_05x1h")]
 layout_mode = 2
 
-[node name="Case4" parent="HBoxContainer/GridContainer" groups=["cases", "colonne1", "ligne2"] instance=ExtResource("1_05x1h")]
+[node name="Case4" parent="VBoxContainer/GridContainer" groups=["cases", "colonne1", "ligne2"] instance=ExtResource("1_05x1h")]
 layout_mode = 2
 
-[node name="Case5" parent="HBoxContainer/GridContainer" groups=["cases", "colonne2", "diagonale1", "diagonale2", "ligne2"] instance=ExtResource("1_05x1h")]
+[node name="Case5" parent="VBoxContainer/GridContainer" groups=["cases", "colonne2", "diagonale1", "diagonale2", "ligne2"] instance=ExtResource("1_05x1h")]
 layout_mode = 2
 
-[node name="Case6" parent="HBoxContainer/GridContainer" groups=["cases", "colonne3", "ligne2"] instance=ExtResource("1_05x1h")]
+[node name="Case6" parent="VBoxContainer/GridContainer" groups=["cases", "colonne3", "ligne2"] instance=ExtResource("1_05x1h")]
 layout_mode = 2
 
-[node name="Case7" parent="HBoxContainer/GridContainer" groups=["cases", "colonne1", "diagonale2", "ligne3"] instance=ExtResource("1_05x1h")]
+[node name="Case7" parent="VBoxContainer/GridContainer" groups=["cases", "colonne1", "diagonale2", "ligne3"] instance=ExtResource("1_05x1h")]
 layout_mode = 2
 
-[node name="Case8" parent="HBoxContainer/GridContainer" groups=["cases", "colonne2", "ligne3"] instance=ExtResource("1_05x1h")]
+[node name="Case8" parent="VBoxContainer/GridContainer" groups=["cases", "colonne2", "ligne3"] instance=ExtResource("1_05x1h")]
 layout_mode = 2
 
-[node name="Case9" parent="HBoxContainer/GridContainer" groups=["cases", "colonne3", "diagonale1", "ligne3"] instance=ExtResource("1_05x1h")]
+[node name="Case9" parent="VBoxContainer/GridContainer" groups=["cases", "colonne3", "diagonale1", "ligne3"] instance=ExtResource("1_05x1h")]
 layout_mode = 2
 
-[node name="Levier" type="Button" parent="HBoxContainer"]
+[node name="Levier" type="Button" parent="VBoxContainer"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
