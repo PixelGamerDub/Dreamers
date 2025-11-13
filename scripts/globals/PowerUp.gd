@@ -7,13 +7,22 @@ var nom : String
 var description : String
 var dureeAction : int
 
-static func listePowerUps():
-	var chemins = listeChemins()
+static func listePowerUps(path := "res://scripts/powerUp/"):
+	var chemins = listeChemins(path)
 	var liste = []
 	for chemin in chemins:
 		var powerUp = load(chemin)
 		liste.append(powerUp.new())
 	return liste
+
+static func listePowerUpsMineurs():
+	return listePowerUps("res://scripts/powerUp/mineurs/")
+	
+static func listeCheminsMajeurs():
+	return listePowerUps("res://scripts/powerUp/majeurs/")
+
+static func listeCheminsDreamers():
+	return listePowerUps("res://scripts/powerUp/dreamers/")
 
 static func listeChemins(path := "res://scripts/powerUp/") -> Array[String]:  
 	var file_paths: Array[String] = []  
@@ -29,15 +38,6 @@ static func listeChemins(path := "res://scripts/powerUp/") -> Array[String]:
 				file_paths.append(file_path)
 		file_name = dir.get_next()  
 	return file_paths
-
-static func listeCheminsMineurs():
-	return listeChemins("res://scripts/powerUp/mineurs/")
-
-static func listeCheminsMajeurs():
-	return listeChemins("res://scripts/powerUp/majeurs/")
-
-static func listeCheminsDreamers():
-	return listeChemins("res://scripts/powerUp/dreamers/")
 
 func action():
 	pass
