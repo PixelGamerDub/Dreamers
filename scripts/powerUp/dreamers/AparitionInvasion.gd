@@ -1,0 +1,2 @@
+extends PowerUpDreamer
+class_name AparitionInvasion

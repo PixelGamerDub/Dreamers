@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://btookag4um20w" path="res://scenes/case.tscn" id="1_jyqdk"]
 [ext_resource type="PackedScene" uid="uid://gqjh4h44pfjp" path="res://scenes/game_manager.tscn" id="2_0y40c"]
 
-[node name="Manche1" type="Control" groups=["casesO", "casesX"]]
+[node name="Manche2" type="Control" groups=["casesO", "casesX"]]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

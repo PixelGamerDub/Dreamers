@@ -1,0 +1,2 @@
+extends PowerUp
+class_name PowerUpMineur

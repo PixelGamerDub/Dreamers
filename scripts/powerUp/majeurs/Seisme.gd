@@ -1,0 +1,2 @@
+extends PowerUpMajeur
+class_name Seisme

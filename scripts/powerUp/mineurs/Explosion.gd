@@ -1,0 +1,2 @@
+extends PowerUpMineur
+class_name Explosion
