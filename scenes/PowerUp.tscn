@@ -57,10 +57,10 @@ sprite_frames = SubResource("SpriteFrames_coxm5")
 
 [node name="Button2" type="Button" parent="VBoxContainer/PowerUpManager"]
 custom_minimum_size = Vector2(300, 300)
-offset_left = 468.0
-offset_top = 174.0
-offset_right = 768.0
-offset_bottom = 474.0
+offset_left = 460.0
+offset_top = 187.0
+offset_right = 760.0
+offset_bottom = 487.0
 size_flags_vertical = 4
 text = "Texte"
 
