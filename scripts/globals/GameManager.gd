@@ -1,6 +1,24 @@
 extends Node
 class_name GameManager
-
+@onready var partie = {
+	1 : {
+		"gagnant" : null
+	},
+	2 : {
+		"gagnant" : null,
+		"powerups" : {
+			Constantes.MOVE_X : [],
+			Constantes.MOVE_O : []
+		}
+	},
+	3 : {
+		"gagnant" : null,
+		"powerups" : {
+			Constantes.MOVE_X : [],
+			Constantes.MOVE_O : []
+		}
+	}
+}
 @onready var stateMachineManche := $StateMachineManche
 @onready var stateMachineTour := $StateMachineTour
 @onready var caseSelectionnee : Case = null
