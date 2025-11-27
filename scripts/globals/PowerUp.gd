@@ -6,6 +6,7 @@ class_name PowerUp
 var nom : String
 var description : String
 var dureeAction : int
+<<<<<<< Updated upstream
 
 static func listePowerUps(path := "res://scripts/powerUp/"):
 	var chemins = listeChemins(path)
@@ -38,6 +39,9 @@ static func listeChemins(path := "res://scripts/powerUp/") -> Array[String]:
 				file_paths.append(file_path)
 		file_name = dir.get_next()  
 	return file_paths
+=======
+static var liste =[PowerUpMajeur]
+>>>>>>> Stashed changes
 
 func action():
 	pass
