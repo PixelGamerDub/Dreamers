@@ -2,9 +2,9 @@ extends StateMachine
 class_name StateMachineManche
 
 @onready var etats = {
-	StateManche.ETAT_MANCHE_1:	$Manche1State,
-	StateManche.ETAT_MANCHE_2:	$Manche2State,
-	StateManche.ETAT_MANCHE_3:	$Manche3State,
+	StateManche.ETAT_MANCHE_1:	Manche1State.new(),
+	StateManche.ETAT_MANCHE_2:	Manche2State.new(),
+	StateManche.ETAT_MANCHE_3:	Manche3State.new(),
 	"": 						null
 }
 

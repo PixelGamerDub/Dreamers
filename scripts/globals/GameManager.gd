@@ -1,5 +1,8 @@
 extends Node
 class_name GameManager
+var stateMachineManche:StateMachineManche
+var stateMachineTour:StateMachineTour
+var levier: Button
 @onready var partie = {
 	1 : {
 		"gagnant" : null
@@ -19,10 +22,7 @@ class_name GameManager
 		}
 	}
 }
-@onready var stateMachineManche := $StateMachineManche
-@onready var stateMachineTour := $StateMachineTour
 @onready var caseSelectionnee : Case = null
-@onready var levier := %Levier
 @onready var tourValide := false
 @onready var dicoPowerUp= {
 	"explosion" : [0,0],
@@ -33,14 +33,11 @@ class_name GameManager
 	"seisme" : [0,0],
 	"anchoix" : [0,0]}
 
-func _ready():
-	levier.pressed.connect(jouer)
-	
-	for case in get_tree().get_nodes_in_group("cases"):
-		case.focus_entered.connect(on_case_focused.bind(case))
+
 
 func on_case_focused(case : Case):
 	caseSelectionnee = case
+	print(caseSelectionnee)
 
 func tourActuel() -> StateTour:
 	return stateMachineTour.etatActuel

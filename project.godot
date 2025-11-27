@@ -14,3 +14,8 @@ config/name="Your Local Arcade"
 run/main_scene="uid://den6t4outgp3p"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Test="*res://scripts/globals/test.gd"
+GameManagerScript="*res://scripts/globals/GameManager.gd"

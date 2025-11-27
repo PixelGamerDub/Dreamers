@@ -2,8 +2,8 @@ extends StateMachine
 class_name StateMachineTour
 
 @onready var etats = {
-	StateTour.ETAT_TOUR_X:	$TourXState,
-	StateTour.ETAT_TOUR_O:	$TourOState,
+	StateTour.ETAT_TOUR_X:	TourXState.new(),
+	StateTour.ETAT_TOUR_O:	TourOState.new(),
 	"": 					null
 }
 

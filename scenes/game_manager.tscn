@@ -32,3 +32,5 @@ script = ExtResource("7_aonbx")
 
 [node name="TourOState" type="Node" parent="StateMachineTour"]
 script = ExtResource("8_lcbjr")
+
+[connection signal="tree_entered" from="." to="." method="_on_tree_entered"]
