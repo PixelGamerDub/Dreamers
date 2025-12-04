@@ -30,15 +30,15 @@ func verifierConditionsVictoire() -> String:
 	var d := 1
 	
 	while l <= dimension and gagnant == "":
-		gagnant = verifierAlignement("ligne" + str(l))
+		gagnant = verifierAlignement("ligne" + str(l)+"g")
 		l += 1
 		
 	while c <= dimension and gagnant == "":
-		gagnant = verifierAlignement("colonne" + str(c))
+		gagnant = verifierAlignement("colonne" + str(c)+"g")
 		c += 1
 	
 	while d <= 2 and gagnant == "":
-		gagnant = verifierAlignement("diagonale" + str(d))
+		gagnant = verifierAlignement("diagonale" + str(d)+"g")
 		d += 1
 	
 	return gagnant
@@ -46,6 +46,7 @@ func verifierConditionsVictoire() -> String:
 # Renvoie le joueur gagnant si la ligne/colonne/diagonale a été remportée par un joueur, sinon une chaine vide
 func verifierAlignement(groupe : String) -> String:
 	print(groupe)
+	print(is_inside_tree())
 	var cases = get_tree().get_nodes_in_group(groupe)
 	var symbolesEgaux := true
 

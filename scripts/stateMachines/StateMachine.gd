@@ -5,7 +5,7 @@ var etatInitial : State
 var etatActuel : State
 
 func _ready() :
-	etatInitial.entrer()
+	pass
 	
 func changerEtat(_move : String) -> bool:
 	return false
