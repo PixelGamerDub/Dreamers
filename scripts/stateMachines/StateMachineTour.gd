@@ -9,6 +9,9 @@ func entrerEtatInitial():
 	etatInitial = etats[StateTour.ETAT_TOUR_X]
 	etatActuel = etatInitial
 	etatInitial.entrer()
+
+func getEtat(nom: String):
+	return etats[nom]
 	
 func changerEtat(_move : String) -> bool:
 	var prochainEtat = etats[etatActuel.transitionSelon(_move)]

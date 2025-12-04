@@ -1,8 +1,10 @@
 extends Node
 class_name GameManager
-var stateMachineManche:StateMachineManche
-var stateMachineTour:StateMachineTour
+
+var stateMachineManche: StateMachineManche
+var stateMachineTour: StateMachineTour
 var levier: Button
+
 @onready var partie = {
 	1 : {
 		"gagnant" : null
@@ -10,18 +12,19 @@ var levier: Button
 	2 : {
 		"gagnant" : null,
 		"powerups" : {
-			Constantes.MOVE_X : [],
-			Constantes.MOVE_O : []
+			StateTour.ETAT_TOUR_X : [],
+			StateTour.ETAT_TOUR_O : []
 		}
 	},
 	3 : {
 		"gagnant" : null,
 		"powerups" : {
-			Constantes.MOVE_X : [],
-			Constantes.MOVE_O : []
+			StateTour.ETAT_TOUR_X : [],
+			StateTour.ETAT_TOUR_O : []
 		}
 	}
 }
+
 @onready var caseSelectionnee : Case = null
 @onready var tourValide := false
 
@@ -62,11 +65,18 @@ func jouer():
 	match(mancheActuelle().verifierConditionsVictoire()):
 		StateTour.ETAT_TOUR_X:
 			print("Le joueur X a gagné la manche " + str(mancheActuelle().numero) + " !")
+			
 			partie[mancheActuelle().numero]["gagnant"] = StateTour.ETAT_TOUR_X
+			stateMachineTour.forcerEtat(stateMachineTour.getEtat(StateTour.ETAT_TOUR_O))
+			stateMachineManche.changerEtat(move)
 			get_tree().change_scene_to_file("res://scenes/PowerUp.tscn")
+			
 		StateTour.ETAT_TOUR_O:
 			print("Le joueur O a gagné la manche " + str(mancheActuelle().numero) + " !")
+			
 			partie[mancheActuelle().numero]["gagnant"] = StateTour.ETAT_TOUR_O
+			stateMachineTour.forcerEtat(stateMachineTour.getEtat(StateTour.ETAT_TOUR_X))
+			stateMachineManche.changerEtat(move)
 			get_tree().change_scene_to_file("res://scenes/PowerUp.tscn")
 
 func actualiserCases():
