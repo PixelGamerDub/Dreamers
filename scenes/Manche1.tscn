@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://d5gqyqov2aen" path="res://scripts/Loader.gd" id="1_gbrya"]
 [ext_resource type="Script" uid="uid://rf3kmp1bpvrg" path="res://scripts/globals/PowerUp.gd" id="3_gbrya"]
 
-[node name="Manche1" type="Control" groups=["casesO", "casesX"]]
+[node name="Manche1" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -34,31 +34,31 @@ layout_mode = 2
 size_flags_horizontal = 0
 columns = 3
 
-[node name="Case1" parent="VBoxContainer/GridContainer" groups=["cases", "colonne1", "diagonale1", "ligne1"] instance=ExtResource("1_05x1h")]
+[node name="Case1" parent="VBoxContainer/GridContainer" groups=["casesg", "colonne1g", "diagonale1g", "ligne1g"] instance=ExtResource("1_05x1h")]
 layout_mode = 2
 
-[node name="Case2" parent="VBoxContainer/GridContainer" groups=["cases", "colonne2", "ligne1"] instance=ExtResource("1_05x1h")]
+[node name="Case2" parent="VBoxContainer/GridContainer" groups=["casesg", "colonne2g", "ligne1g"] instance=ExtResource("1_05x1h")]
 layout_mode = 2
 
-[node name="Case3" parent="VBoxContainer/GridContainer" groups=["cases", "colonne3", "diagonale2", "ligne1"] instance=ExtResource("1_05x1h")]
+[node name="Case3" parent="VBoxContainer/GridContainer" groups=["casesg", "colonne3g", "diagonale2g", "ligne1g"] instance=ExtResource("1_05x1h")]
 layout_mode = 2
 
-[node name="Case4" parent="VBoxContainer/GridContainer" groups=["cases", "colonne1", "ligne2"] instance=ExtResource("1_05x1h")]
+[node name="Case4" parent="VBoxContainer/GridContainer" groups=["casesg", "colonne1g", "ligne2g"] instance=ExtResource("1_05x1h")]
 layout_mode = 2
 
-[node name="Case5" parent="VBoxContainer/GridContainer" groups=["cases", "colonne2", "diagonale1", "diagonale2", "ligne2"] instance=ExtResource("1_05x1h")]
+[node name="Case5" parent="VBoxContainer/GridContainer" groups=["casesg", "colonne2g", "diagonale1g", "diagonale2g", "ligne2g"] instance=ExtResource("1_05x1h")]
 layout_mode = 2
 
-[node name="Case6" parent="VBoxContainer/GridContainer" groups=["cases", "colonne3", "ligne2"] instance=ExtResource("1_05x1h")]
+[node name="Case6" parent="VBoxContainer/GridContainer" groups=["casesg", "colonne3g", "ligne2g"] instance=ExtResource("1_05x1h")]
 layout_mode = 2
 
-[node name="Case7" parent="VBoxContainer/GridContainer" groups=["cases", "colonne1", "diagonale2", "ligne3"] instance=ExtResource("1_05x1h")]
+[node name="Case7" parent="VBoxContainer/GridContainer" groups=["casesg", "colonne1g", "diagonale2g", "ligne3g"] instance=ExtResource("1_05x1h")]
 layout_mode = 2
 
-[node name="Case8" parent="VBoxContainer/GridContainer" groups=["cases", "colonne2", "ligne3"] instance=ExtResource("1_05x1h")]
+[node name="Case8" parent="VBoxContainer/GridContainer" groups=["casesg", "colonne2g", "ligne3g"] instance=ExtResource("1_05x1h")]
 layout_mode = 2
 
-[node name="Case9" parent="VBoxContainer/GridContainer" groups=["cases", "colonne3", "diagonale1", "ligne3"] instance=ExtResource("1_05x1h")]
+[node name="Case9" parent="VBoxContainer/GridContainer" groups=["casesg", "colonne3g", "diagonale1g", "ligne3g"] instance=ExtResource("1_05x1h")]
 layout_mode = 2
 
 [node name="Levier" type="Button" parent="VBoxContainer"]

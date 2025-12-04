@@ -19,3 +19,21 @@ config/icon="res://icon.svg"
 
 Test="*res://scripts/globals/test.gd"
 GameManagerScript="*res://scripts/globals/GameManager.gd"
+
+[global_group]
+
+casesg=""
+casesOg=""
+casesXg=""
+colonne1g=""
+colonne2g=""
+colonne3g=""
+colonne4g=""
+colonne5g=""
+diagonale1g=""
+diagonale2g=""
+ligne1g=""
+ligne2g=""
+ligne3g=""
+ligne4g=""
+ligne5g=""

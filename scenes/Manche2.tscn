@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://btookag4um20w" path="res://scenes/case.tscn" id="1_jyqdk"]
 [ext_resource type="PackedScene" uid="uid://gqjh4h44pfjp" path="res://scenes/game_manager.tscn" id="2_0y40c"]
 
-[node name="Manche2" type="Control" groups=["casesO", "casesX"]]
+[node name="Manche2" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -32,52 +32,52 @@ layout_mode = 2
 size_flags_horizontal = 0
 columns = 4
 
-[node name="Case1" parent="HBoxContainer/GridContainer" groups=["cases", "colonne1", "diagonale1", "ligne1"] instance=ExtResource("1_jyqdk")]
+[node name="Case1" parent="HBoxContainer/GridContainer" groups=["casesg", "colonne1g", "diagonale1g", "ligne1g"] instance=ExtResource("1_jyqdk")]
 layout_mode = 2
 
-[node name="Case2" parent="HBoxContainer/GridContainer" groups=["cases", "colonne2", "ligne1"] instance=ExtResource("1_jyqdk")]
+[node name="Case2" parent="HBoxContainer/GridContainer" groups=["casesg", "colonne2g", "ligne1g"] instance=ExtResource("1_jyqdk")]
 layout_mode = 2
 
-[node name="Case3" parent="HBoxContainer/GridContainer" groups=["cases", "colonne3", "ligne1"] instance=ExtResource("1_jyqdk")]
+[node name="Case3" parent="HBoxContainer/GridContainer" groups=["casesg", "colonne3g", "ligne1g"] instance=ExtResource("1_jyqdk")]
 layout_mode = 2
 
-[node name="Case4" parent="HBoxContainer/GridContainer" groups=["cases", "colonne4", "diagonale2", "ligne4"] instance=ExtResource("1_jyqdk")]
+[node name="Case4" parent="HBoxContainer/GridContainer" groups=["casesg", "colonne4g", "diagonale2g", "ligne1g"] instance=ExtResource("1_jyqdk")]
 layout_mode = 2
 
-[node name="Case5" parent="HBoxContainer/GridContainer" groups=["cases", "colonne1", "ligne2"] instance=ExtResource("1_jyqdk")]
+[node name="Case5" parent="HBoxContainer/GridContainer" groups=["casesg", "colonne1g", "ligne2g"] instance=ExtResource("1_jyqdk")]
 layout_mode = 2
 
-[node name="Case6" parent="HBoxContainer/GridContainer" groups=["cases", "colonne2", "diagonale1", "ligne2"] instance=ExtResource("1_jyqdk")]
+[node name="Case6" parent="HBoxContainer/GridContainer" groups=["casesg", "colonne2g", "diagonale1g", "ligne2g"] instance=ExtResource("1_jyqdk")]
 layout_mode = 2
 
-[node name="Case7" parent="HBoxContainer/GridContainer" groups=["cases", "colonne3", "diagonale2", "ligne2"] instance=ExtResource("1_jyqdk")]
+[node name="Case7" parent="HBoxContainer/GridContainer" groups=["casesg", "colonne3g", "diagonale2g", "ligne2g"] instance=ExtResource("1_jyqdk")]
 layout_mode = 2
 
-[node name="Case8" parent="HBoxContainer/GridContainer" groups=["cases", "colonne4", "ligne2"] instance=ExtResource("1_jyqdk")]
+[node name="Case8" parent="HBoxContainer/GridContainer" groups=["casesg", "colonne4g", "ligne2g"] instance=ExtResource("1_jyqdk")]
 layout_mode = 2
 
-[node name="Case9" parent="HBoxContainer/GridContainer" groups=["cases", "colonne1", "ligne3"] instance=ExtResource("1_jyqdk")]
+[node name="Case9" parent="HBoxContainer/GridContainer" groups=["casesg", "colonne1g", "ligne3g"] instance=ExtResource("1_jyqdk")]
 layout_mode = 2
 
-[node name="Case10" parent="HBoxContainer/GridContainer" groups=["cases", "colonne2", "diagonale2", "ligne3"] instance=ExtResource("1_jyqdk")]
+[node name="Case10" parent="HBoxContainer/GridContainer" groups=["casesg", "colonne2g", "diagonale2g", "ligne3g"] instance=ExtResource("1_jyqdk")]
 layout_mode = 2
 
-[node name="Case11" parent="HBoxContainer/GridContainer" groups=["cases", "colonne3", "diagonale2", "ligne3"] instance=ExtResource("1_jyqdk")]
+[node name="Case11" parent="HBoxContainer/GridContainer" groups=["casesg", "colonne3g", "diagonale1g", "ligne3g"] instance=ExtResource("1_jyqdk")]
 layout_mode = 2
 
-[node name="Case12" parent="HBoxContainer/GridContainer" groups=["cases", "colonne4", "ligne3"] instance=ExtResource("1_jyqdk")]
+[node name="Case12" parent="HBoxContainer/GridContainer" groups=["casesg", "colonne4g", "ligne3g"] instance=ExtResource("1_jyqdk")]
 layout_mode = 2
 
-[node name="Case13" parent="HBoxContainer/GridContainer" groups=["cases", "colonne1", "diagonale2", "ligne4"] instance=ExtResource("1_jyqdk")]
+[node name="Case13" parent="HBoxContainer/GridContainer" groups=["casesg", "colonne1g", "diagonale2g", "ligne4g"] instance=ExtResource("1_jyqdk")]
 layout_mode = 2
 
-[node name="Case14" parent="HBoxContainer/GridContainer" groups=["cases", "colonne1", "ligne4"] instance=ExtResource("1_jyqdk")]
+[node name="Case14" parent="HBoxContainer/GridContainer" groups=["casesg", "colonne2g", "ligne4g"] instance=ExtResource("1_jyqdk")]
 layout_mode = 2
 
-[node name="Case15" parent="HBoxContainer/GridContainer" groups=["cases", "colonne3", "ligne4"] instance=ExtResource("1_jyqdk")]
+[node name="Case15" parent="HBoxContainer/GridContainer" groups=["casesg", "colonne4g", "ligne4g"] instance=ExtResource("1_jyqdk")]
 layout_mode = 2
 
-[node name="Case16" parent="HBoxContainer/GridContainer" groups=["cases", "colonne4", "diagonale2", "ligne4"] instance=ExtResource("1_jyqdk")]
+[node name="Case16" parent="HBoxContainer/GridContainer" groups=["casesg", "colonne4g", "diagonale1g", "ligne4g"] instance=ExtResource("1_jyqdk")]
 layout_mode = 2
 
 [node name="Levier" type="Button" parent="HBoxContainer"]
