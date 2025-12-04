@@ -34,13 +34,16 @@ func verifierConditionsVictoire() -> String:
 	var d := 1
 	
 	while l <= dimension and gagnant == "":
-		gagnant = verifierAlignement("ligne" + str(l))
+		gagnant = verifierAlignement("ligne" + str(l) + "g")
+		l += 1
 		
 	while c <= dimension and gagnant == "":
-		gagnant = verifierAlignement("colonne" + str(c))
+		gagnant = verifierAlignement("colonne" + str(c) + "g")
+		c += 1
 	
 	while d <= 2 and gagnant == "":
-		gagnant = verifierAlignement("diagonale" + str(d))
+		gagnant = verifierAlignement("diagonale" + str(d) + "g")
+		d += 1
 	
 	return gagnant
 

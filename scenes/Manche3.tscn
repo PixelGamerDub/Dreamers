@@ -1,15 +1,17 @@
-[gd_scene load_steps=3 format=3 uid="uid://d3a4tt67cvmyy"]
+[gd_scene load_steps=4 format=3 uid="uid://d3a4tt67cvmyy"]
 
 [ext_resource type="PackedScene" uid="uid://btookag4um20w" path="res://scenes/case.tscn" id="1_5dy18"]
+[ext_resource type="Script" uid="uid://d5gqyqov2aen" path="res://scripts/Loader.gd" id="1_6l0r4"]
 [ext_resource type="PackedScene" uid="uid://gqjh4h44pfjp" path="res://scenes/game_manager.tscn" id="2_6l0r4"]
 
-[node name="Manche1" type="Control"]
+[node name="Manche3" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_6l0r4")
 
 [node name="HBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1

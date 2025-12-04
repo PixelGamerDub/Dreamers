@@ -2,6 +2,18 @@ extends Control
 
 func _ready():
 	var levier=%Levier
+	
+	GameManagerScript.levier=levier
+	GameManagerScript.levier.pressed.connect(GameManagerScript.jouer)
+	
+	
+	for case in get_tree().get_nodes_in_group("casesg"):
+		case.focus_entered.connect(GameManagerScript.on_case_focused.bind(case))
+		
+		
+	if GameManagerScript.get_child_count() > 0: return
+	
+	
 	#Création des States Machines
 	GameManagerScript.add_child(StateMachineManche.new(),true)
 	GameManagerScript.add_child(StateMachineTour.new(),true)
@@ -21,7 +33,7 @@ func _ready():
 	#ajout des états tour
 	GameManagerScript.stateMachineTour.add_child(TourXState.new())
 	GameManagerScript.stateMachineTour.add_child(TourOState.new())
-	GameManagerScript.stateMachineManche.etats={	"": 						null}
+	
 	
 	for child in(GameManagerScript.stateMachineManche.get_children()):
 		if child is Manche1State:
@@ -42,8 +54,4 @@ func _ready():
 	
 	GameManagerScript.stateMachineTour.entrerEtatInitial()
 	
-	GameManagerScript.levier=levier
-	GameManagerScript.levier.pressed.connect(GameManagerScript.jouer)
-	for case in get_tree().get_nodes_in_group("casesg"):
-		case.focus_entered.connect(GameManagerScript.on_case_focused.bind(case))
 		

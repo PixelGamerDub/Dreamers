@@ -24,20 +24,9 @@ var levier: Button
 }
 @onready var caseSelectionnee : Case = null
 @onready var tourValide := false
-@onready var dicoPowerUp= {
-	"explosion" : [0,0],
-	"volCase" : [0,0],
-	"garantie" : [0,0],
-	"malediction" : [0,0],
-	"miseCroupier" : [0,0],
-	"seisme" : [0,0],
-	"anchoix" : [0,0]}
-
-
 
 func on_case_focused(case : Case):
 	caseSelectionnee = case
-	print(caseSelectionnee)
 
 func tourActuel() -> StateTour:
 	return stateMachineTour.etatActuel
@@ -60,15 +49,16 @@ func jouer():
 		move = tourActuel().moveAdverse
 	elif rand < 1:
 		move = Constantes.MOVE_FISSURE
+	move = tourActuel().monMove
 	
 	tourValide = caseSelectionnee.changerEtat(move)
 	
 	if not tourValide:
 		return
-	
+
 	actualiserCases()
 	stateMachineTour.changerEtat(move)
-	
+
 	match(mancheActuelle().verifierConditionsVictoire()):
 		StateTour.ETAT_TOUR_X:
 			print("Le joueur X a gagné la manche " + str(mancheActuelle().numero) + " !")
