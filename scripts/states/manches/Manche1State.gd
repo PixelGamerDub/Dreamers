@@ -45,8 +45,6 @@ func verifierConditionsVictoire() -> String:
 
 # Renvoie le joueur gagnant si la ligne/colonne/diagonale a été remportée par un joueur, sinon une chaine vide
 func verifierAlignement(groupe : String) -> String:
-	print(groupe)
-	print(is_inside_tree())
 	var cases = get_tree().get_nodes_in_group(groupe)
 	var symbolesEgaux := true
 

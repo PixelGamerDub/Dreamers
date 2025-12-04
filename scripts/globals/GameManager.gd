@@ -76,7 +76,7 @@ func jouer():
 			print("Le joueur O a gagné la manche " + str(mancheActuelle().numero) + " !")
 
 func actualiserCases():
-	var cases = get_tree().get_nodes_in_group("cases")
+	var cases = get_tree().get_nodes_in_group("casesg")
 	for case in cases:
 		if case != caseSelectionnee:
 			case.vieillir(mancheActuelle().nbCoupsMax * 2)

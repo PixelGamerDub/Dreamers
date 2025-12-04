@@ -1,13 +1,11 @@
 extends StateMachine
 class_name StateMachineTour
 
-@onready var etats = {
-	StateTour.ETAT_TOUR_X:	TourXState.new(),
-	StateTour.ETAT_TOUR_O:	TourOState.new(),
+var etats = {
 	"": 					null
 }
 
-func _ready():
+func entrerEtatInitial():
 	etatInitial = etats[StateTour.ETAT_TOUR_X]
 	etatActuel = etatInitial
 	etatInitial.entrer()
