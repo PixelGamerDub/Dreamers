@@ -62,8 +62,12 @@ func jouer():
 	match(mancheActuelle().verifierConditionsVictoire()):
 		StateTour.ETAT_TOUR_X:
 			print("Le joueur X a gagné la manche " + str(mancheActuelle().numero) + " !")
+			partie[mancheActuelle().numero]["gagnant"] = StateTour.ETAT_TOUR_X
+			get_tree().change_scene_to_file("res://scenes/PowerUp.tscn")
 		StateTour.ETAT_TOUR_O:
 			print("Le joueur O a gagné la manche " + str(mancheActuelle().numero) + " !")
+			partie[mancheActuelle().numero]["gagnant"] = StateTour.ETAT_TOUR_O
+			get_tree().change_scene_to_file("res://scenes/PowerUp.tscn")
 
 func actualiserCases():
 	var cases = get_tree().get_nodes_in_group("casesg")

@@ -9,7 +9,6 @@ func entrerEtatInitial():
 	etatInitial = etats[StateManche.ETAT_MANCHE_1]
 	etatActuel = etatInitial
 	etatInitial.entrer()
-	forcerEtat(etats[StateManche.ETAT_MANCHE_3])
 	
 func changerEtat(_move : String) -> bool:
 	var prochainEtat = etats[etatActuel.transitionSelon(_move)]

@@ -1,19 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://b7vgx4gno2qux"]
+[gd_scene load_steps=4 format=3 uid="uid://b7vgx4gno2qux"]
 
 [ext_resource type="Script" uid="uid://b4yvah0wsc1a7" path="res://scripts/power_up_manager.gd" id="1_vxdkk"]
-
-[sub_resource type="GDScript" id="GDScript_coxm5"]
-script/source = "extends VBoxContainer
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-"
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_coxm5"]
 
@@ -47,31 +34,30 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 30
 alignment = 1
-script = SubResource("GDScript_coxm5")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_constants/separation = 10
 alignment = 1
 
-[node name="Button" type="Button" parent="VBoxContainer/HBoxContainer"]
+[node name="BoutonJeton1" type="Button" parent="VBoxContainer/HBoxContainer"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(300, 300)
 layout_mode = 2
 size_flags_vertical = 4
 text = "Texte"
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="VBoxContainer/HBoxContainer/Button"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="VBoxContainer/HBoxContainer/BoutonJeton1"]
 sprite_frames = SubResource("SpriteFrames_coxm5")
 
-[node name="Button2" type="Button" parent="VBoxContainer/HBoxContainer"]
+[node name="BoutonJeton2" type="Button" parent="VBoxContainer/HBoxContainer"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(300, 300)
 layout_mode = 2
 size_flags_vertical = 4
 text = "Texte"
 
-[node name="Button3" type="Button" parent="VBoxContainer/HBoxContainer"]
+[node name="BoutonJeton3" type="Button" parent="VBoxContainer/HBoxContainer"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(300, 300)
 layout_mode = 2
@@ -87,6 +73,16 @@ label_settings = SubResource("LabelSettings_vxdkk")
 horizontal_alignment = 1
 autowrap_mode = 2
 
-[connection signal="focus_entered" from="VBoxContainer/HBoxContainer/Button" to="PowerUpManager" method="_on_button_focus_entered" flags=18]
-[connection signal="focus_entered" from="VBoxContainer/HBoxContainer/Button2" to="PowerUpManager" method="_on_button_focus_entered" flags=18]
-[connection signal="focus_entered" from="VBoxContainer/HBoxContainer/Button3" to="PowerUpManager" method="_on_button_focus_entered" flags=18]
+[node name="BoutonChoix" type="Button" parent="VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(350, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 24
+disabled = true
+text = "Sélectionner ce Jeton"
+
+[connection signal="focus_entered" from="VBoxContainer/HBoxContainer/BoutonJeton1" to="PowerUpManager" method="_on_button_focus_entered" flags=18]
+[connection signal="focus_entered" from="VBoxContainer/HBoxContainer/BoutonJeton2" to="PowerUpManager" method="_on_button_focus_entered" flags=18]
+[connection signal="focus_entered" from="VBoxContainer/HBoxContainer/BoutonJeton3" to="PowerUpManager" method="_on_button_focus_entered" flags=18]
+[connection signal="pressed" from="VBoxContainer/BoutonChoix" to="PowerUpManager" method="_on_bouton_choix_pressed"]
