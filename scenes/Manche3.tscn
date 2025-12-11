@@ -117,3 +117,52 @@ theme_override_font_sizes/font_size = 24
 text = "Levier"
 
 [node name="GameManager" parent="." instance=ExtResource("2_6l0r4")]
+
+[node name="VBoxPowerX" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 0
+offset_left = 228.0
+offset_top = 900.0
+offset_right = 328.0
+offset_bottom = 1000.0
+
+[node name="GridPowerX" type="GridContainer" parent="VBoxPowerX"]
+layout_mode = 2
+columns = 3
+
+[node name="ButtonPowerX" type="Button" parent="VBoxPowerX/GridPowerX"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+
+[node name="ButtonPowerXMaj" type="Button" parent="VBoxPowerX/GridPowerX"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+
+[node name="ButtonPowerX2_" type="Button" parent="VBoxPowerX/GridPowerX"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+
+[node name="VBoxPowerO" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 870.0
+offset_top = 902.0
+offset_right = 970.0
+offset_bottom = 1002.0
+alignment = 2
+
+[node name="GridPowerO" type="GridContainer" parent="VBoxPowerO"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+columns = 3
+
+[node name="ButtonPowerO" type="Button" parent="VBoxPowerO/GridPowerO"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+
+[node name="ButtonPowerX" type="Button" parent="VBoxPowerO/GridPowerO"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+
+[node name="ButtonPowerX2" type="Button" parent="VBoxPowerO/GridPowerO"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2

@@ -5,6 +5,12 @@ func _ready():
 	
 	GameManagerScript.levier = levier
 	GameManagerScript.levier.pressed.connect(GameManagerScript.jouer)
+	if GameManagerScript.mancheActuelle() is Manche2State :
+		GameManagerScript.buttonPowerO.pressed.connect(GameManagerScript.jouerJetonO)
+		GameManagerScript.buttonPowerX.pressed.connect(GameManagerScript.jouerJetonX)
+	elif GameManagerScript.mancheActuelle() is Manche3State :
+		GameManagerScript.buttonPowerO.pressed.connect(GameManagerScript.jouerJetonO)
+		GameManagerScript.buttonPowerX.pressed.connect(GameManagerScript.jouerJetonX)
 	
 	for case in get_tree().get_nodes_in_group("casesg"):
 		case.focus_entered.connect(GameManagerScript.on_case_focused.bind(case))
