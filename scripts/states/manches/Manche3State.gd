@@ -14,6 +14,10 @@ func _ready():
 
 func entrer():
 	print("Début de la manche 3")
+	GameManagerScript.partie[3]["powerups"][StateTour.ETAT_TOUR_X]=GameManagerScript.partie[2]["powerups"][StateTour.ETAT_TOUR_X]
+	GameManagerScript.partie[3]["powerups"][StateTour.ETAT_TOUR_O]=GameManagerScript.partie[2]["powerups"][StateTour.ETAT_TOUR_O]
+
+		
 	# Jouer l'animation de début de manche
 	pass
 
