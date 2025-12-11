@@ -14,6 +14,10 @@ var jetonSelectionne: PowerUp
 var boutonSelectionne: Button
 
 func _ready() -> void:
+	if((selecteur==StateTour.ETAT_TOUR_X) and (len(GameManagerScript.partie[GameManagerScript.mancheActuelle().numero]["powerups"][StateTour.ETAT_TOUR_X])==1)):
+		print("JOUEUR X VOUS POUVEZ CHOISIR UN POUVOIR MAJEUR")
+	if((selecteur==StateTour.ETAT_TOUR_O) and (len(GameManagerScript.partie[GameManagerScript.mancheActuelle().numero]["powerups"][StateTour.ETAT_TOUR_O])==1)):
+		print("JOUEUR O VOUS POUVEZ CHOISIR UN POUVOIR MAJEUR")
 	print("Au joueur X de choisir" if selecteur == StateTour.ETAT_TOUR_X else "Au joueur O de choisir")
 	var powerups = PowerUp.listePowerUpsMineurs()
 	
@@ -46,4 +50,8 @@ func _on_bouton_choix_pressed() -> void:
 		get_tree().change_scene_to_file("res://scenes/Manche" + str(GameManagerScript.mancheActuelle().numero) + ".tscn")
 	else:
 		selecteur = gagnant
-		print("Au joueur X de choisir" if gagnant == StateTour.ETAT_TOUR_X else "Au joueur O de choisir")
+	if((selecteur==StateTour.ETAT_TOUR_X) and (len(GameManagerScript.partie[GameManagerScript.mancheActuelle().numero]["powerups"][StateTour.ETAT_TOUR_X])==1)):
+		print("JOUEUR X VOUS POUVEZ CHOISIR UN POUVOIR MAJEUR")
+	if((selecteur==StateTour.ETAT_TOUR_O) and (len(GameManagerScript.partie[GameManagerScript.mancheActuelle().numero]["powerups"][StateTour.ETAT_TOUR_O])==1)):
+		print("JOUEUR O VOUS POUVEZ CHOISIR UN POUVOIR MAJEUR")
+	print("Au joueur X de choisir" if gagnant == StateTour.ETAT_TOUR_X else "Au joueur O de choisir")
