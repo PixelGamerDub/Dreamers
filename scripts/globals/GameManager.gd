@@ -14,7 +14,8 @@ var levier: Button
 		"powerups" : {
 			StateTour.ETAT_TOUR_X : [],
 			StateTour.ETAT_TOUR_O : []
-		}
+		},
+		"powerUpsMajeurs" : null
 	},
 	3 : {
 		"gagnant" : null,

@@ -3,7 +3,7 @@ class_name Manche3State
 
 func _ready():
 	numero = 3
-	powerUpPresents=true
+	powerUpPresents=Ga
 	dimension = 5
 	nbCoupsMax = dimension + 1
 	
