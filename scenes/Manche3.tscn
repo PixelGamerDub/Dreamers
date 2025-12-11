@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://d3a4tt67cvmyy"]
+[gd_scene load_steps=5 format=3 uid="uid://d3a4tt67cvmyy"]
 
 [ext_resource type="PackedScene" uid="uid://btookag4um20w" path="res://scenes/case.tscn" id="1_5dy18"]
 [ext_resource type="Script" uid="uid://d5gqyqov2aen" path="res://scripts/Loader.gd" id="1_6l0r4"]
 [ext_resource type="PackedScene" uid="uid://gqjh4h44pfjp" path="res://scenes/game_manager.tscn" id="2_6l0r4"]
+[ext_resource type="PackedScene" uid="uid://dab45y4u1taf6" path="res://scenes/buttonPower.tscn" id="4_2io1a"]
 
 [node name="Manche3" type="Control"]
 layout_mode = 3
@@ -130,18 +131,6 @@ offset_bottom = 1000.0
 layout_mode = 2
 columns = 3
 
-[node name="ButtonPowerX" type="Button" parent="VBoxPowerX/GridPowerX"]
-custom_minimum_size = Vector2(100, 100)
-layout_mode = 2
-
-[node name="ButtonPowerXMaj" type="Button" parent="VBoxPowerX/GridPowerX"]
-custom_minimum_size = Vector2(100, 100)
-layout_mode = 2
-
-[node name="ButtonPowerX2_" type="Button" parent="VBoxPowerX/GridPowerX"]
-custom_minimum_size = Vector2(100, 100)
-layout_mode = 2
-
 [node name="VBoxPowerO" type="VBoxContainer" parent="."]
 layout_mode = 0
 offset_left = 870.0
@@ -155,14 +144,5 @@ custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 columns = 3
 
-[node name="ButtonPowerO" type="Button" parent="VBoxPowerO/GridPowerO"]
-custom_minimum_size = Vector2(100, 100)
-layout_mode = 2
-
-[node name="ButtonPowerX" type="Button" parent="VBoxPowerO/GridPowerO"]
-custom_minimum_size = Vector2(100, 100)
-layout_mode = 2
-
-[node name="ButtonPowerX2" type="Button" parent="VBoxPowerO/GridPowerO"]
-custom_minimum_size = Vector2(100, 100)
+[node name="ButtonPowerO" parent="VBoxPowerO/GridPowerO" instance=ExtResource("4_2io1a")]
 layout_mode = 2

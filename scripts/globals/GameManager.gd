@@ -7,7 +7,11 @@ var levier: Button
 
 @onready var partie = {
 	1 : {
-		"gagnant" : null
+		"gagnant" : null,
+		"powerups" : {
+			StateTour.ETAT_TOUR_X : [],
+			StateTour.ETAT_TOUR_O : []
+		}
 	},
 	2 : {
 		"gagnant" : null,

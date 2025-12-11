@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://dab45y4u1taf6"]
+
+[node name="ButtonPowerO" type="Button"]
+custom_minimum_size = Vector2(100, 100)

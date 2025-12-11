@@ -63,6 +63,7 @@ func _ready():
 	
 	GameManagerScript.stateMachineTour.entrerEtatInitial()
 	
-	if GameManagerScript.partie[GameManagerScript.mancheActuelle().numero][]
+	for powerup in GameManagerScript.partie[GameManagerScript.mancheActuelle().numero]["powerups"][StateTour.ETAT_TOUR_X]:
+		
 	
 		
