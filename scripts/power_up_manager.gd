@@ -3,6 +3,7 @@ extends Node
 @onready var boutonJeton1: Button = %BoutonJeton1
 @onready var boutonJeton2: Button = %BoutonJeton2
 @onready var boutonJeton3: Button = %BoutonJeton3
+@onready var BoutonJetonMajeur: Button = %BoutonMajeur
 @onready var descriptionPowerUp: Label = %DescriptionPowerUp
 @onready var boutonChoix: Button = %BoutonChoix
 @onready var boutonsJeton := [boutonJeton1, boutonJeton2, boutonJeton3]
@@ -14,6 +15,7 @@ var jetonSelectionne: PowerUp
 var boutonSelectionne: Button
 
 func _ready() -> void:
+	BoutonJetonMajeur.disabled=true
 	if((selecteur==StateTour.ETAT_TOUR_X) and (len(GameManagerScript.partie[GameManagerScript.mancheActuelle().numero]["powerups"][StateTour.ETAT_TOUR_X])==1)):
 		print("JOUEUR X VOUS POUVEZ CHOISIR UN POUVOIR MAJEUR")
 	if((selecteur==StateTour.ETAT_TOUR_O) and (len(GameManagerScript.partie[GameManagerScript.mancheActuelle().numero]["powerups"][StateTour.ETAT_TOUR_O])==1)):
@@ -55,3 +57,7 @@ func _on_bouton_choix_pressed() -> void:
 	if((selecteur==StateTour.ETAT_TOUR_O) and (len(GameManagerScript.partie[GameManagerScript.mancheActuelle().numero]["powerups"][StateTour.ETAT_TOUR_O])==1)):
 		print("JOUEUR O VOUS POUVEZ CHOISIR UN POUVOIR MAJEUR")
 	print("Au joueur X de choisir" if gagnant == StateTour.ETAT_TOUR_X else "Au joueur O de choisir")
+
+
+func _on_bouton_majeur_pressed() -> void:
+	print("bouton majeur presse")

@@ -3,6 +3,7 @@ class_name Manche1State
 
 func _ready():
 	numero = 1
+	powerUpPresents=false
 	dimension = 3
 	nbCoupsMax = dimension + 1
 	borne1 = 0.50 # Remplacer cette valeur par 1 pour retirer l'aléatoire

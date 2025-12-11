@@ -3,6 +3,7 @@ class_name Manche2State
 
 func _ready():
 	numero = 2
+	powerUpPresents=true
 	dimension = 4
 	nbCoupsMax = dimension + 1
 	

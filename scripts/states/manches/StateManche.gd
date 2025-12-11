@@ -6,7 +6,7 @@ static var ETAT_MANCHE_2 := "E_MANCHE_2"
 static var ETAT_MANCHE_3 := "E_MANCHE_3"
 
 var numero : int
-
+var powerUpPresents : bool
 var dimension : int
 var nbCoupsMax : int
 var borne1 : float

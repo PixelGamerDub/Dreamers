@@ -82,7 +82,6 @@ func jouer():
 			stateMachineTour.forcerEtat(stateMachineTour.getEtat(StateTour.ETAT_TOUR_X))
 			stateMachineManche.changerEtat(move)
 			get_tree().change_scene_to_file("res://scenes/PowerUp.tscn")
-	
 
 func actualiserCases():
 	var cases = get_tree().get_nodes_in_group("casesg")

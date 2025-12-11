@@ -56,7 +56,3 @@ func _ready():
 			GameManagerScript.stateMachineTour.etats[StateTour.ETAT_TOUR_O] = child
 	
 	GameManagerScript.stateMachineTour.entrerEtatInitial()
-	
-	if GameManagerScript.partie[GameManagerScript.mancheActuelle().numero][]
-	
-		
