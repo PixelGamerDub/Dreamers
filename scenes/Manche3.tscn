@@ -13,6 +13,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_6l0r4")
+buttonPower = ExtResource("4_2io1a")
 
 [node name="HBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -119,30 +120,17 @@ text = "Levier"
 
 [node name="GameManager" parent="." instance=ExtResource("2_6l0r4")]
 
-[node name="VBoxPowerX" type="VBoxContainer" parent="."]
-custom_minimum_size = Vector2(100, 100)
+[node name="GridPowerX" type="GridContainer" parent="."]
+unique_name_in_owner = true
 layout_mode = 0
 offset_left = 228.0
 offset_top = 900.0
 offset_right = 328.0
-offset_bottom = 1000.0
-
-[node name="GridPowerX" type="GridContainer" parent="VBoxPowerX"]
-layout_mode = 2
+offset_bottom = 900.0
 columns = 3
 
-[node name="VBoxPowerO" type="VBoxContainer" parent="."]
-layout_mode = 0
-offset_left = 870.0
-offset_top = 902.0
-offset_right = 970.0
-offset_bottom = 1002.0
-alignment = 2
-
-[node name="GridPowerO" type="GridContainer" parent="VBoxPowerO"]
+[node name="GridPowerO" type="GridContainer" parent="."]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(100, 100)
-layout_mode = 2
+layout_mode = 0
 columns = 3
-
-[node name="ButtonPowerO" parent="VBoxPowerO/GridPowerO" instance=ExtResource("4_2io1a")]
-layout_mode = 2

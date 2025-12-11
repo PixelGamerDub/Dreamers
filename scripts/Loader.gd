@@ -1,16 +1,12 @@
 extends Control
 
+@export var buttonPower : PackedScene
+
 func _ready():
 	var levier = %Levier
-	
+
 	GameManagerScript.levier = levier
 	GameManagerScript.levier.pressed.connect(GameManagerScript.jouer)
-	if GameManagerScript.mancheActuelle() is Manche2State :
-		GameManagerScript.buttonPowerO.pressed.connect(GameManagerScript.jouerJetonO)
-		GameManagerScript.buttonPowerX.pressed.connect(GameManagerScript.jouerJetonX)
-	elif GameManagerScript.mancheActuelle() is Manche3State :
-		GameManagerScript.buttonPowerO.pressed.connect(GameManagerScript.jouerJetonO)
-		GameManagerScript.buttonPowerX.pressed.connect(GameManagerScript.jouerJetonX)
 	
 	for case in get_tree().get_nodes_in_group("casesg"):
 		case.focus_entered.connect(GameManagerScript.on_case_focused.bind(case))
@@ -62,8 +58,15 @@ func _ready():
 			GameManagerScript.stateMachineTour.etats[StateTour.ETAT_TOUR_O] = child
 	
 	GameManagerScript.stateMachineTour.entrerEtatInitial()
-	
-	for powerup in GameManagerScript.partie[GameManagerScript.mancheActuelle().numero]["powerups"][StateTour.ETAT_TOUR_X]:
-		
+	if GameManagerScript.mancheActuelle().powerUpPresent :
+		var gridPowerO: GridContainer = %GridPowerO
+		var gridPowerX: GridContainer = %GridPowerX
+		for powerup in GameManagerScript.partie[GameManagerScript.mancheActuelle().numero]["powerups"][StateTour.ETAT_TOUR_X]:
+			var bouton = buttonPower.instantiate()
+			gridPowerX.add_child(bouton)
+			
+		for powerup in GameManagerScript.partie[GameManagerScript.mancheActuelle().numero]["powerups"][StateTour.ETAT_TOUR_O]:
+			var bouton = buttonPower.instantiate()
+			gridPowerO.add_child(bouton)
 	
 		
