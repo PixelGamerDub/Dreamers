@@ -57,4 +57,6 @@ func _ready():
 	
 	GameManagerScript.stateMachineTour.entrerEtatInitial()
 	
+	if GameManagerScript.partie[GameManagerScript.mancheActuelle().numero][]
+	
 		

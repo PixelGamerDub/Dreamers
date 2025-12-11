@@ -21,6 +21,10 @@ var levier: Button
 		"powerups" : {
 			StateTour.ETAT_TOUR_X : [],
 			StateTour.ETAT_TOUR_O : []
+		},
+		"powerUpsMajeurs" : {
+			StateTour.ETAT_TOUR_X : [],
+			StateTour.ETAT_TOUR_O : []
 		}
 	}
 }
