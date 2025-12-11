@@ -61,7 +61,7 @@ func jouer():
 		move = tourActuel().moveAdverse
 	elif rand < 1:
 		move = Constantes.MOVE_FISSURE
-	move = tourActuel().monMove
+	move = Constantes.MOVE_X
 	
 	tourValide = caseSelectionnee.changerEtat(move)
 	

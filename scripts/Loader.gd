@@ -19,6 +19,23 @@ func _ready():
 		print("Powerups de O")
 		for p in GameManagerScript.partie[GameManagerScript.mancheActuelle().numero]["powerups"][StateTour.ETAT_TOUR_O]:
 			print(p.nom)
+		
+		if GameManagerScript.mancheActuelle().powerUpPresents:
+			var gridPowerO: GridContainer = %GridPowerO
+			var gridPowerX: GridContainer = %GridPowerX
+			
+			for powerup in GameManagerScript.partie[GameManagerScript.mancheActuelle().numero]["powerups"][StateTour.ETAT_TOUR_X]:
+				var bouton = buttonPower.instantiate()
+				bouton.text = powerup.nom
+				gridPowerX.add_child(bouton)
+				
+			for powerup in GameManagerScript.partie[GameManagerScript.mancheActuelle().numero]["powerups"][StateTour.ETAT_TOUR_O]:
+				var bouton = buttonPower.instantiate()
+				bouton.text = powerup.nom
+				
+				# A suivre : rattacher le signal pressed à une fonction du GameManager
+				
+				gridPowerO.add_child(bouton)
 		return
 	
 	# Création des States Machines
@@ -58,15 +75,6 @@ func _ready():
 			GameManagerScript.stateMachineTour.etats[StateTour.ETAT_TOUR_O] = child
 	
 	GameManagerScript.stateMachineTour.entrerEtatInitial()
-	if GameManagerScript.mancheActuelle().powerUpPresent :
-		var gridPowerO: GridContainer = %GridPowerO
-		var gridPowerX: GridContainer = %GridPowerX
-		for powerup in GameManagerScript.partie[GameManagerScript.mancheActuelle().numero]["powerups"][StateTour.ETAT_TOUR_X]:
-			var bouton = buttonPower.instantiate()
-			gridPowerX.add_child(bouton)
-			
-		for powerup in GameManagerScript.partie[GameManagerScript.mancheActuelle().numero]["powerups"][StateTour.ETAT_TOUR_O]:
-			var bouton = buttonPower.instantiate()
-			gridPowerO.add_child(bouton)
+	
 	
 		

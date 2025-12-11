@@ -1,9 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://b8x2l6uc6trua"]
+[gd_scene load_steps=4 format=3 uid="uid://b8x2l6uc6trua"]
 
 [ext_resource type="Script" uid="uid://d5gqyqov2aen" path="res://scripts/Loader.gd" id="1_0y40c"]
 [ext_resource type="PackedScene" uid="uid://btookag4um20w" path="res://scenes/case.tscn" id="1_jyqdk"]
-[ext_resource type="PackedScene" uid="uid://gqjh4h44pfjp" path="res://scenes/game_manager.tscn" id="2_0y40c"]
-[ext_resource type="Script" uid="uid://5pi2ym0a1rj2" path="res://scenes/BoutonPower.gd" id="4_c8avc"]
+[ext_resource type="PackedScene" uid="uid://dab45y4u1taf6" path="res://scenes/buttonPower.tscn" id="2_c8avc"]
 
 [node name="Manche2" type="Control"]
 layout_mode = 3
@@ -13,8 +12,9 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_0y40c")
+buttonPower = ExtResource("2_c8avc")
 
-[node name="HBoxContainer" type="VBoxContainer" parent="."]
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -30,98 +30,79 @@ grow_vertical = 2
 theme_override_constants/separation = 64
 alignment = 1
 
-[node name="GridContainer" type="GridContainer" parent="HBoxContainer"]
+[node name="GridContainer" type="GridContainer" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 0
 columns = 4
 
-[node name="Case1" parent="HBoxContainer/GridContainer" groups=["casesg", "colonne1g", "diagonale1g", "ligne1g"] instance=ExtResource("1_jyqdk")]
+[node name="Case1" parent="VBoxContainer/GridContainer" groups=["casesg", "colonne1g", "diagonale1g", "ligne1g"] instance=ExtResource("1_jyqdk")]
 layout_mode = 2
 
-[node name="Case2" parent="HBoxContainer/GridContainer" groups=["casesg", "colonne2g", "ligne1g"] instance=ExtResource("1_jyqdk")]
+[node name="Case2" parent="VBoxContainer/GridContainer" groups=["casesg", "colonne2g", "ligne1g"] instance=ExtResource("1_jyqdk")]
 layout_mode = 2
 
-[node name="Case3" parent="HBoxContainer/GridContainer" groups=["casesg", "colonne3g", "ligne1g"] instance=ExtResource("1_jyqdk")]
+[node name="Case3" parent="VBoxContainer/GridContainer" groups=["casesg", "colonne3g", "ligne1g"] instance=ExtResource("1_jyqdk")]
 layout_mode = 2
 
-[node name="Case4" parent="HBoxContainer/GridContainer" groups=["casesg", "colonne4g", "diagonale2g", "ligne1g"] instance=ExtResource("1_jyqdk")]
+[node name="Case4" parent="VBoxContainer/GridContainer" groups=["casesg", "colonne4g", "diagonale2g", "ligne1g"] instance=ExtResource("1_jyqdk")]
 layout_mode = 2
 
-[node name="Case5" parent="HBoxContainer/GridContainer" groups=["casesg", "colonne1g", "ligne2g"] instance=ExtResource("1_jyqdk")]
+[node name="Case5" parent="VBoxContainer/GridContainer" groups=["casesg", "colonne1g", "ligne2g"] instance=ExtResource("1_jyqdk")]
 layout_mode = 2
 
-[node name="Case6" parent="HBoxContainer/GridContainer" groups=["casesg", "colonne2g", "diagonale1g", "ligne2g"] instance=ExtResource("1_jyqdk")]
+[node name="Case6" parent="VBoxContainer/GridContainer" groups=["casesg", "colonne2g", "diagonale1g", "ligne2g"] instance=ExtResource("1_jyqdk")]
 layout_mode = 2
 
-[node name="Case7" parent="HBoxContainer/GridContainer" groups=["casesg", "colonne3g", "diagonale2g", "ligne2g"] instance=ExtResource("1_jyqdk")]
+[node name="Case7" parent="VBoxContainer/GridContainer" groups=["casesg", "colonne3g", "diagonale2g", "ligne2g"] instance=ExtResource("1_jyqdk")]
 layout_mode = 2
 
-[node name="Case8" parent="HBoxContainer/GridContainer" groups=["casesg", "colonne4g", "ligne2g"] instance=ExtResource("1_jyqdk")]
+[node name="Case8" parent="VBoxContainer/GridContainer" groups=["casesg", "colonne4g", "ligne2g"] instance=ExtResource("1_jyqdk")]
 layout_mode = 2
 
-[node name="Case9" parent="HBoxContainer/GridContainer" groups=["casesg", "colonne1g", "ligne3g"] instance=ExtResource("1_jyqdk")]
+[node name="Case9" parent="VBoxContainer/GridContainer" groups=["casesg", "colonne1g", "ligne3g"] instance=ExtResource("1_jyqdk")]
 layout_mode = 2
 
-[node name="Case10" parent="HBoxContainer/GridContainer" groups=["casesg", "colonne2g", "diagonale2g", "ligne3g"] instance=ExtResource("1_jyqdk")]
+[node name="Case10" parent="VBoxContainer/GridContainer" groups=["casesg", "colonne2g", "diagonale2g", "ligne3g"] instance=ExtResource("1_jyqdk")]
 layout_mode = 2
 
-[node name="Case11" parent="HBoxContainer/GridContainer" groups=["casesg", "colonne3g", "diagonale1g", "ligne3g"] instance=ExtResource("1_jyqdk")]
+[node name="Case11" parent="VBoxContainer/GridContainer" groups=["casesg", "colonne3g", "diagonale1g", "ligne3g"] instance=ExtResource("1_jyqdk")]
 layout_mode = 2
 
-[node name="Case12" parent="HBoxContainer/GridContainer" groups=["casesg", "colonne4g", "ligne3g"] instance=ExtResource("1_jyqdk")]
+[node name="Case12" parent="VBoxContainer/GridContainer" groups=["casesg", "colonne4g", "ligne3g"] instance=ExtResource("1_jyqdk")]
 layout_mode = 2
 
-[node name="Case13" parent="HBoxContainer/GridContainer" groups=["casesg", "colonne1g", "diagonale2g", "ligne4g"] instance=ExtResource("1_jyqdk")]
+[node name="Case13" parent="VBoxContainer/GridContainer" groups=["casesg", "colonne1g", "diagonale2g", "ligne4g"] instance=ExtResource("1_jyqdk")]
 layout_mode = 2
 
-[node name="Case14" parent="HBoxContainer/GridContainer" groups=["casesg", "colonne2g", "ligne4g"] instance=ExtResource("1_jyqdk")]
+[node name="Case14" parent="VBoxContainer/GridContainer" groups=["casesg", "colonne2g", "ligne4g"] instance=ExtResource("1_jyqdk")]
 layout_mode = 2
 
-[node name="Case15" parent="HBoxContainer/GridContainer" groups=["casesg", "colonne3g", "ligne4g"] instance=ExtResource("1_jyqdk")]
+[node name="Case15" parent="VBoxContainer/GridContainer" groups=["casesg", "colonne3g", "ligne4g"] instance=ExtResource("1_jyqdk")]
 layout_mode = 2
 
-[node name="Case16" parent="HBoxContainer/GridContainer" groups=["casesg", "colonne4g", "diagonale1g", "ligne4g"] instance=ExtResource("1_jyqdk")]
+[node name="Case16" parent="VBoxContainer/GridContainer" groups=["casesg", "colonne4g", "diagonale1g", "ligne4g"] instance=ExtResource("1_jyqdk")]
 layout_mode = 2
 
-[node name="Levier" type="Button" parent="HBoxContainer"]
+[node name="Levier" type="Button" parent="VBoxContainer"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 theme_override_font_sizes/font_size = 24
 text = "Levier"
 
-[node name="GameManager" parent="." instance=ExtResource("2_0y40c")]
-
-[node name="VBoxPowerX" type="VBoxContainer" parent="."]
+[node name="GridPowerO" type="GridContainer" parent="."]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 0
-offset_left = 228.0
-offset_top = 900.0
-offset_right = 328.0
-offset_bottom = 1000.0
+offset_left = 976.0
+offset_top = 160.0
+offset_right = 1076.0
+offset_bottom = 260.0
 
-[node name="GridPowerX" type="GridContainer" parent="VBoxPowerX"]
-layout_mode = 2
-
-[node name="ButtonPowerX" type="Button" parent="VBoxPowerX/GridPowerX"]
-custom_minimum_size = Vector2(100, 100)
-layout_mode = 2
-
-[node name="VBoxPowerO" type="VBoxContainer" parent="."]
+[node name="GridPowerX" type="GridContainer" parent="."]
+unique_name_in_owner = true
 layout_mode = 0
-offset_left = 870.0
-offset_top = 902.0
-offset_right = 970.0
-offset_bottom = 1002.0
-alignment = 2
-
-[node name="GridPowerO" type="GridContainer" parent="VBoxPowerO"]
-custom_minimum_size = Vector2(100, 100)
-layout_mode = 2
-
-[node name="ButtonPowerO" type="Button" parent="VBoxPowerO/GridPowerO"]
-custom_minimum_size = Vector2(100, 100)
-layout_mode = 2
-script = ExtResource("4_c8avc")
-
-[connection signal="pressed" from="VBoxPowerO/GridPowerO/ButtonPowerO" to="VBoxPowerO/GridPowerO/ButtonPowerO" method="_on_pressed"]
+offset_left = 179.0
+offset_top = 146.0
+offset_right = 279.0
+offset_bottom = 146.0
