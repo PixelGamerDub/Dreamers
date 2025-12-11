@@ -13,21 +13,37 @@ extends Node
 var boutonPowerUp = {}
 var jetonSelectionne: PowerUp
 var boutonSelectionne: Button
+var powerups : Array
+var powerUpsMajeurs : Array
 
 func _ready() -> void:
-	BoutonJetonMajeur.disabled=true
-	if((selecteur==StateTour.ETAT_TOUR_X) and (len(GameManagerScript.partie[GameManagerScript.mancheActuelle().numero]["powerups"][StateTour.ETAT_TOUR_X])==1)):
-		print("JOUEUR X VOUS POUVEZ CHOISIR UN POUVOIR MAJEUR")
-	if((selecteur==StateTour.ETAT_TOUR_O) and (len(GameManagerScript.partie[GameManagerScript.mancheActuelle().numero]["powerups"][StateTour.ETAT_TOUR_O])==1)):
-		print("JOUEUR O VOUS POUVEZ CHOISIR UN POUVOIR MAJEUR")
+	GameManagerScript.partie[3]["powerups"][StateTour.ETAT_TOUR_X]=[]
+	#GameManagerScript.partie[3]["powerups"][StateTour.ETAT_TOUR_O]=[]
+	if GameManagerScript.mancheActuelle().numero>=3:
+		BoutonJetonMajeur.disabled=(len(GameManagerScript.partie[GameManagerScript.mancheActuelle().numero]["powerups"][selecteur])==1)
 	print("Au joueur X de choisir" if selecteur == StateTour.ETAT_TOUR_X else "Au joueur O de choisir")
-	var powerups = PowerUp.listePowerUpsMineurs()
+	#activer_powerUpMajeurs()
+	
+	powerups = PowerUp.listePowerUpsMineurs()
+	powerUpsMajeurs=PowerUp.listeCheminsMajeurs()
 	
 	for bouton in boutonsJeton:
 		var powerupChoisi = powerups.pick_random()
 		powerups.erase(powerupChoisi)
 		bouton.text = powerupChoisi.nom
 		boutonPowerUp[bouton] = powerupChoisi
+	
+	var powerUpMajeurChoisi=powerUpsMajeurs.pick_random()
+	print(powerUpMajeurChoisi)
+	powerUpsMajeurs.erase(powerUpMajeurChoisi)
+	BoutonJetonMajeur.text=powerUpMajeurChoisi.nom
+	
+	
+
+func activer_powerUpMajeurs() -> void :
+	if(len(GameManagerScript.partie[GameManagerScript.mancheActuelle().numero]["powerups"][StateTour.ETAT_TOUR_X])==1 or len(GameManagerScript.partie[GameManagerScript.mancheActuelle().numero]["powerups"][StateTour.ETAT_TOUR_O])==1):
+		BoutonJetonMajeur.disabled=false
+	
 
 func _on_button_focus_entered(bouton) -> void:
 	if bouton.disabled:
@@ -57,6 +73,10 @@ func _on_bouton_choix_pressed() -> void:
 	if((selecteur==StateTour.ETAT_TOUR_O) and (len(GameManagerScript.partie[GameManagerScript.mancheActuelle().numero]["powerups"][StateTour.ETAT_TOUR_O])==1)):
 		print("JOUEUR O VOUS POUVEZ CHOISIR UN POUVOIR MAJEUR")
 	print("Au joueur X de choisir" if gagnant == StateTour.ETAT_TOUR_X else "Au joueur O de choisir")
+	if GameManagerScript.mancheActuelle().numero>=3:
+		BoutonJetonMajeur.disabled=(len(GameManagerScript.partie[GameManagerScript.mancheActuelle().numero]["powerups"][selecteur])==1)
+
+	
 
 
 func _on_bouton_majeur_pressed() -> void:
