@@ -1,7 +1,7 @@
 extends Control
 
 @export var buttonPower : PackedScene
-#test test test
+#test test test test test
 func _ready():
 	var levier = %Levier
 
